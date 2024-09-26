@@ -8,18 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
-		849472422C95781300E68946 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849472412C95781300E68946 /* ContentView.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
+		849B463C2CA56CE70087716B /* Morph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B463B2CA56CE70087716B /* Morph.swift */; };
+		849B463E2CA56DB10087716B /* InheritanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B463D2CA56DB10087716B /* InheritanceType.swift */; };
+		849B46402CA56E060087716B /* MorphCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B463F2CA56E060087716B /* MorphCalculatorViewModel.swift */; };
+		849B46432CA56EC00087716B /* MorphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B46422CA56EC00087716B /* MorphManager.swift */; };
+		849B46452CA56FD00087716B /* InheritanceStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B46442CA56FD00087716B /* InheritanceStrategy.swift */; };
+		849B46472CA570870087716B /* DominantStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B46462CA570870087716B /* DominantStrategy.swift */; };
+		849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B46482CA570A30087716B /* RecessiveStrategy.swift */; };
+		849B464B2CA570D60087716B /* PolygenicStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B464A2CA570D60087716B /* PolygenicStrategy.swift */; };
+		849B464D2CA571090087716B /* CodominantStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B464C2CA571090087716B /* CodominantStrategy.swift */; };
+		849B464F2CA572950087716B /* MorphCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B464E2CA572950087716B /* MorphCalculator.swift */; };
+		849B46512CA574920087716B /* MorphCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B46502CA574920087716B /* MorphCalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
-		849472412C95781300E68946 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849472452C95781400E68946 /* repf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = repf.entitlements; sourceTree = "<group>"; };
 		849472472C95781400E68946 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		849B463B2CA56CE70087716B /* Morph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morph.swift; sourceTree = "<group>"; };
+		849B463D2CA56DB10087716B /* InheritanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritanceType.swift; sourceTree = "<group>"; };
+		849B463F2CA56E060087716B /* MorphCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphCalculatorViewModel.swift; sourceTree = "<group>"; };
+		849B46422CA56EC00087716B /* MorphManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphManager.swift; sourceTree = "<group>"; };
+		849B46442CA56FD00087716B /* InheritanceStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritanceStrategy.swift; sourceTree = "<group>"; };
+		849B46462CA570870087716B /* DominantStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominantStrategy.swift; sourceTree = "<group>"; };
+		849B46482CA570A30087716B /* RecessiveStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecessiveStrategy.swift; sourceTree = "<group>"; };
+		849B464A2CA570D60087716B /* PolygenicStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygenicStrategy.swift; sourceTree = "<group>"; };
+		849B464C2CA571090087716B /* CodominantStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodominantStrategy.swift; sourceTree = "<group>"; };
+		849B464E2CA572950087716B /* MorphCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphCalculator.swift; sourceTree = "<group>"; };
+		849B46502CA574920087716B /* MorphCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphCalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +72,9 @@
 		8494723E2C95781300E68946 /* repf */ = {
 			isa = PBXGroup;
 			children = (
-				8494723F2C95781300E68946 /* repfApp.swift */,
-				849472412C95781300E68946 /* ContentView.swift */,
+				849B46372CA56C280087716B /* Features */,
+				849B46382CA56C4A0087716B /* Shared */,
+				849B46392CA56C600087716B /* App */,
 				849472432C95781400E68946 /* Assets.xcassets */,
 				849472452C95781400E68946 /* repf.entitlements */,
 				849472462C95781400E68946 /* Preview Content */,
@@ -67,6 +88,79 @@
 				849472472C95781400E68946 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		849B46332CA56B630087716B /* MorphCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				849B46342CA56B980087716B /* Model */,
+				849B46352CA56BC10087716B /* View */,
+				849B46362CA56BCC0087716B /* ViewModel */,
+				849B463A2CA56CA20087716B /* Services */,
+			);
+			path = MorphCalculator;
+			sourceTree = "<group>";
+		};
+		849B46342CA56B980087716B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				849B463B2CA56CE70087716B /* Morph.swift */,
+				849B463D2CA56DB10087716B /* InheritanceType.swift */,
+				849B46422CA56EC00087716B /* MorphManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		849B46352CA56BC10087716B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				849B46502CA574920087716B /* MorphCalculatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		849B46362CA56BCC0087716B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				849B463F2CA56E060087716B /* MorphCalculatorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		849B46372CA56C280087716B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				849B46332CA56B630087716B /* MorphCalculator */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		849B46382CA56C4A0087716B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		849B46392CA56C600087716B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8494723F2C95781300E68946 /* repfApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		849B463A2CA56CA20087716B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				849B46442CA56FD00087716B /* InheritanceStrategy.swift */,
+				849B46462CA570870087716B /* DominantStrategy.swift */,
+				849B46482CA570A30087716B /* RecessiveStrategy.swift */,
+				849B464A2CA570D60087716B /* PolygenicStrategy.swift */,
+				849B464C2CA571090087716B /* CodominantStrategy.swift */,
+				849B464E2CA572950087716B /* MorphCalculator.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +233,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849472422C95781300E68946 /* ContentView.swift in Sources */,
+				849B463E2CA56DB10087716B /* InheritanceType.swift in Sources */,
+				849B463C2CA56CE70087716B /* Morph.swift in Sources */,
+				849B464F2CA572950087716B /* MorphCalculator.swift in Sources */,
+				849B464B2CA570D60087716B /* PolygenicStrategy.swift in Sources */,
 				849472402C95781300E68946 /* repfApp.swift in Sources */,
+				849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */,
+				849B464D2CA571090087716B /* CodominantStrategy.swift in Sources */,
+				849B46452CA56FD00087716B /* InheritanceStrategy.swift in Sources */,
+				849B46432CA56EC00087716B /* MorphManager.swift in Sources */,
+				849B46472CA570870087716B /* DominantStrategy.swift in Sources */,
+				849B46512CA574920087716B /* MorphCalculatorView.swift in Sources */,
+				849B46402CA56E060087716B /* MorphCalculatorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
