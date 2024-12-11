@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SplashView: View {
     @State private var isButtonEnabled = true // 버튼 활성화 상태
-
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -10,9 +10,8 @@ struct SplashView: View {
                 Image("SplashBackgraound")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .edgesIgnoringSafeArea(.all)
-
+                    .ignoresSafeArea()
+                
                 VStack {
                     Spacer() // 상단 여백
                     
@@ -26,7 +25,7 @@ struct SplashView: View {
                             }
                         )
                         .padding(.horizontal, 16)
-
+                        
                         // 두 번째 버튼
                         PrimaryButton(
                             title: "구글로 시작하기",
@@ -38,7 +37,7 @@ struct SplashView: View {
                         )
                         .padding(.horizontal, 16)
                     }
-                    .padding(.bottom, geometry.safeAreaInsets.bottom + 40) // 하단 여백
+                    .padding(.bottom, geometry.safeAreaInsets.bottom + 80) // 하단 여백
                 }
             }
         }
