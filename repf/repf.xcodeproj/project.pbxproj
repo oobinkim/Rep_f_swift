@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FA6EB462D07FDFF0078EAA8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6EB452D07FDF30078EAA8 /* SplashView.swift */; };
+		1FA6EB482D0802930078EAA8 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6EB472D0802760078EAA8 /* ColorManager.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FA6EB452D07FDF30078EAA8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		1FA6EB472D0802760078EAA8 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,8 +76,11 @@
 		8494723E2C95781300E68946 /* repf */ = {
 			isa = PBXGroup;
 			children = (
-				849B46372CA56C280087716B /* Features */,
+				849B463A2CA56CA20087716B /* Services */,
 				849B46382CA56C4A0087716B /* Shared */,
+				849B46362CA56BCC0087716B /* ViewModel */,
+				849B46352CA56BC10087716B /* View */,
+				849B46342CA56B980087716B /* Model */,
 				849B46392CA56C600087716B /* App */,
 				849472432C95781400E68946 /* Assets.xcassets */,
 				849472452C95781400E68946 /* repf.entitlements */,
@@ -93,10 +100,12 @@
 		849B46332CA56B630087716B /* MorphCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				849B46342CA56B980087716B /* Model */,
-				849B46352CA56BC10087716B /* View */,
-				849B46362CA56BCC0087716B /* ViewModel */,
-				849B463A2CA56CA20087716B /* Services */,
+				849B46442CA56FD00087716B /* InheritanceStrategy.swift */,
+				849B46462CA570870087716B /* DominantStrategy.swift */,
+				849B46482CA570A30087716B /* RecessiveStrategy.swift */,
+				849B464A2CA570D60087716B /* PolygenicStrategy.swift */,
+				849B464C2CA571090087716B /* CodominantStrategy.swift */,
+				849B464E2CA572950087716B /* MorphCalculator.swift */,
 			);
 			path = MorphCalculator;
 			sourceTree = "<group>";
@@ -114,6 +123,7 @@
 		849B46352CA56BC10087716B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1FA6EB452D07FDF30078EAA8 /* SplashView.swift */,
 				849B46502CA574920087716B /* MorphCalculatorView.swift */,
 			);
 			path = View;
@@ -127,17 +137,10 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		849B46372CA56C280087716B /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				849B46332CA56B630087716B /* MorphCalculator */,
-			);
-			path = Features;
-			sourceTree = "<group>";
-		};
 		849B46382CA56C4A0087716B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1FA6EB472D0802760078EAA8 /* ColorManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -153,12 +156,7 @@
 		849B463A2CA56CA20087716B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				849B46442CA56FD00087716B /* InheritanceStrategy.swift */,
-				849B46462CA570870087716B /* DominantStrategy.swift */,
-				849B46482CA570A30087716B /* RecessiveStrategy.swift */,
-				849B464A2CA570D60087716B /* PolygenicStrategy.swift */,
-				849B464C2CA571090087716B /* CodominantStrategy.swift */,
-				849B464E2CA572950087716B /* MorphCalculator.swift */,
+				849B46332CA56B630087716B /* MorphCalculator */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -240,11 +238,13 @@
 				849472402C95781300E68946 /* repfApp.swift in Sources */,
 				849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */,
 				849B464D2CA571090087716B /* CodominantStrategy.swift in Sources */,
+				1FA6EB482D0802930078EAA8 /* ColorManager.swift in Sources */,
 				849B46452CA56FD00087716B /* InheritanceStrategy.swift in Sources */,
 				849B46432CA56EC00087716B /* MorphManager.swift in Sources */,
 				849B46472CA570870087716B /* DominantStrategy.swift in Sources */,
 				849B46512CA574920087716B /* MorphCalculatorView.swift in Sources */,
 				849B46402CA56E060087716B /* MorphCalculatorViewModel.swift in Sources */,
+				1FA6EB462D07FDFF0078EAA8 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"repf/Preview Content\"";
-				DEVELOPMENT_TEAM = YW8X49RZK2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -412,7 +412,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"repf/Preview Content\"";
-				DEVELOPMENT_TEAM = YW8X49RZK2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
