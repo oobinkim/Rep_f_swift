@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3955302D099534004DEC2B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F39552F2D09952E004DEC2B /* PrimaryButton.swift */; };
+		1F3955352D099625004DEC2B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3955342D099622004DEC2B /* Color.swift */; };
 		1FA6EB462D07FDFF0078EAA8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6EB452D07FDF30078EAA8 /* SplashView.swift */; };
-		1FA6EB482D0802930078EAA8 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6EB472D0802760078EAA8 /* ColorManager.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -26,8 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F39552F2D09952E004DEC2B /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		1F3955342D099622004DEC2B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1FA6EB452D07FDF30078EAA8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		1FA6EB472D0802760078EAA8 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +59,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F39552D2D09950C004DEC2B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				849B46502CA574920087716B /* MorphCalculatorView.swift */,
+				1FA6EB452D07FDF30078EAA8 /* SplashView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1F39552E2D09951A004DEC2B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1F39552F2D09952E004DEC2B /* PrimaryButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1F3955332D09961A004DEC2B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1F3955342D099622004DEC2B /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		849472332C95781300E68946 = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +103,8 @@
 		8494723E2C95781300E68946 /* repf */ = {
 			isa = PBXGroup;
 			children = (
+				1F3955332D09961A004DEC2B /* Extensions */,
 				849B463A2CA56CA20087716B /* Services */,
-				849B46382CA56C4A0087716B /* Shared */,
 				849B46362CA56BCC0087716B /* ViewModel */,
 				849B46352CA56BC10087716B /* View */,
 				849B46342CA56B980087716B /* Model */,
@@ -123,8 +150,8 @@
 		849B46352CA56BC10087716B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1FA6EB452D07FDF30078EAA8 /* SplashView.swift */,
-				849B46502CA574920087716B /* MorphCalculatorView.swift */,
+				1F39552E2D09951A004DEC2B /* Components */,
+				1F39552D2D09950C004DEC2B /* Screens */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,14 +162,6 @@
 				849B463F2CA56E060087716B /* MorphCalculatorViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		849B46382CA56C4A0087716B /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				1FA6EB472D0802760078EAA8 /* ColorManager.swift */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		849B46392CA56C600087716B /* App */ = {
@@ -235,10 +254,11 @@
 				849B463C2CA56CE70087716B /* Morph.swift in Sources */,
 				849B464F2CA572950087716B /* MorphCalculator.swift in Sources */,
 				849B464B2CA570D60087716B /* PolygenicStrategy.swift in Sources */,
+				1F3955302D099534004DEC2B /* PrimaryButton.swift in Sources */,
 				849472402C95781300E68946 /* repfApp.swift in Sources */,
 				849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */,
 				849B464D2CA571090087716B /* CodominantStrategy.swift in Sources */,
-				1FA6EB482D0802930078EAA8 /* ColorManager.swift in Sources */,
+				1F3955352D099625004DEC2B /* Color.swift in Sources */,
 				849B46452CA56FD00087716B /* InheritanceStrategy.swift in Sources */,
 				849B46432CA56EC00087716B /* MorphManager.swift in Sources */,
 				849B46472CA570870087716B /* DominantStrategy.swift in Sources */,
@@ -396,7 +416,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = repfTeam.repf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -434,7 +455,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = repfTeam.repf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
