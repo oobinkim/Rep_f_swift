@@ -18,7 +18,6 @@ class MorphCalculatorViewModel: ObservableObject {
     private var morphCalculator = MorphCalculator()
     
     init() {
-        // Model에서 데이터를 로드합니다.
         morphs = MorphManager.shared.getMorphs()
     }
     

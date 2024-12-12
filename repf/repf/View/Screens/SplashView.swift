@@ -1,11 +1,18 @@
+//
+//  SplashView.swift
+//  repf
+//
+//  Created by oobin on 12/11/24.
+//
+
 import SwiftUI
 
 struct SplashView: View {
-    @State private var isButtonEnabled = true
-    @State private var showButtons = false // 버튼 표시 여부
-    
+    @State private var navigateToAgreement = false
+    @State private var showButtons = false
+    @State private var isButtonEnabled = false
     var body: some View {
-        GeometryReader { geometry in
+        NavigationStack {
             ZStack {
                 Color.appBlack
                     .ignoresSafeArea()
@@ -43,8 +50,6 @@ struct SplashView: View {
                     .padding(.bottom, 10)
                 }
                 
-                Spacer()
-                
                 VStack {
                     Spacer()
                     
@@ -53,28 +58,33 @@ struct SplashView: View {
                             title: "시작하기",
                             isEnabled: isButtonEnabled,
                             action: {
-                                print("시작하기 버튼 클릭됨!")
+                                navigateToAgreement = true 
                             }
                         )
                         .padding(.horizontal, 16)
-                        .opacity(showButtons ? 1 : 0) // 페이드 인 효과
+                        .opacity(showButtons ? 1 : 0)
                         
                         PrimaryButton(
                             title: "구글로 시작하기",
-                            isEnabled: isButtonEnabled,
+                            isEnabled: true,
                             action: {
                                 print("구글로 시작하기 버튼 클릭됨!")
                             },
                             enabledColor: Color.white
                         )
                         .padding(.horizontal, 16)
-                        .opacity(showButtons ? 1 : 0) // 페이드 인 효과
+                        .opacity(showButtons ? 1 : 0)
                     }
-                    .padding(.bottom, geometry.safeAreaInsets.bottom + 20)
+                    .padding(.bottom, 20)
                 }
             }
+            .navigationDestination(isPresented: $navigateToAgreement) {
+                AgreementView()
+            }
             .onAppear {
+                // 2초 후 버튼 활성화
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    isButtonEnabled = true
                     withAnimation(.easeIn(duration: 0.5)) {
                         showButtons = true
                     }
@@ -83,6 +93,7 @@ struct SplashView: View {
         }
     }
 }
+
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
