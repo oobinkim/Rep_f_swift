@@ -15,7 +15,7 @@ struct CustomBackButton: View {
             action()
         }) {
             Image(systemName: "arrow.left")
-                .font(.custom("Pretendard-Medium", size: 12))
+                .font(.custom("Pretendard-Medium", size: 18))
                 .foregroundColor(.appWhite)
         }
     }
