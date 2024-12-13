@@ -15,6 +15,7 @@ struct repfApp: App {
     var body: some Scene {
         WindowGroup {
             SplashView()
+                .customFont("Pretendard")
         }
     }
 }

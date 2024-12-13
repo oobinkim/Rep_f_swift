@@ -41,7 +41,7 @@ struct PrimaryButton: View {
             }
         }) {
             Text(title)
-                .font(.system(size: 18, weight: .semibold))
+                .font(.custom("Pretendard-Medium", size: 18))
                 .foregroundColor(textColor) // 텍스트 색상
                 .frame(maxWidth: .infinity)
                 .padding()

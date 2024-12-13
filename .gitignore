@@ -49,6 +49,7 @@ playground.xcworkspace
 
 Carthage/Build/
 
+repf/repf/Font/*.otf
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo.
