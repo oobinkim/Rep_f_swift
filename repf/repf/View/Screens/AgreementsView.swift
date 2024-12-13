@@ -39,7 +39,6 @@ struct AgreementView: View {
                 enabledColor: isAllAgreed ? .ableGray : .textBlack,
                 textColor: .white
             )
-            .padding(.horizontal, 8)
             .padding(.bottom, 16)
 
             // 체크박스 섹션
@@ -71,7 +70,6 @@ struct AgreementView: View {
                 disabledColor: .primaryDisabled,
                 textColor: .textBlack
             )
-            .padding(.horizontal, 8)
             .padding(.bottom, 40)
         }
         .background(Color.bgBlack.edgesIgnoringSafeArea(.all))

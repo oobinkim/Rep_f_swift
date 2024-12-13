@@ -62,7 +62,6 @@ struct SplashView: View {
                             },
                             textColor: .textBlack
                         )
-                        .padding(.horizontal, 8)
                         .opacity(showButtons ? 1 : 0)
                         
                         PrimaryButton(
@@ -74,7 +73,6 @@ struct SplashView: View {
                             enabledColor: Color.appWhite,
                             textColor: .textBlack
                         )
-                        .padding(.horizontal, 8)
                         .opacity(showButtons ? 1 : 0)
                     }
                     .padding(.bottom, 20)

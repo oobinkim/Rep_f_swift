@@ -49,6 +49,6 @@ struct PrimaryButton: View {
                 .cornerRadius(12)
         }
         .disabled(!isEnabled)
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 4)
     }
 }
