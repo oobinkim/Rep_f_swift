@@ -42,13 +42,13 @@ struct PrimaryButton: View {
         }) {
             Text(title)
                 .font(.custom("Pretendard-Medium", size: 18))
-                .foregroundColor(textColor) // 텍스트 색상
+                .foregroundColor(textColor)
                 .frame(maxWidth: .infinity)
                 .padding()
-                .background(isEnabled ? enabledColor : disabledColor) // 배경색
-                .cornerRadius(12) // 둥근 모서리
+                .background(isEnabled ? enabledColor : disabledColor)
+                .cornerRadius(12)
         }
-        .disabled(!isEnabled) // 버튼 활성화 상태 관리
-        .padding(.horizontal, 16) // 좌우 여백
+        .disabled(!isEnabled)
+        .padding(.horizontal, 32)
     }
 }

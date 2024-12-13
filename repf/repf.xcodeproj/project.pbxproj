@@ -26,6 +26,8 @@
 		1FB6BACC2D0C11FD00822FDB /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB6BABF2D0C11FD00822FDB /* Pretendard-Light.otf */; };
 		1FB6BACD2D0C11FD00822FDB /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB6BAC02D0C11FD00822FDB /* Pretendard-Medium.otf */; };
 		1FB6BACF2D0C13F700822FDB /* View+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BACE2D0C13E900822FDB /* View+CustomFont.swift */; };
+		1FB6BAD12D0C197E00822FDB /* AgreementCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BAD02D0C197100822FDB /* AgreementCheckBox.swift */; };
+		1FB6BAD32D0C1DEC00822FDB /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BAD22D0C1DCA00822FDB /* CustomBackButton.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		1FB6BAC22D0C11FD00822FDB /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		1FB6BAC32D0C11FD00822FDB /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		1FB6BACE2D0C13E900822FDB /* View+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CustomFont.swift"; sourceTree = "<group>"; };
+		1FB6BAD02D0C197100822FDB /* AgreementCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementCheckBox.swift; sourceTree = "<group>"; };
+		1FB6BAD22D0C1DCA00822FDB /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		1F39552E2D09951A004DEC2B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BAD22D0C1DCA00822FDB /* CustomBackButton.swift */,
+				1FB6BAD02D0C197100822FDB /* AgreementCheckBox.swift */,
 				1F39552F2D09952E004DEC2B /* PrimaryButton.swift */,
 			);
 			path = Components;
@@ -316,8 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				849B463E2CA56DB10087716B /* InheritanceType.swift in Sources */,
+				1FB6BAD12D0C197E00822FDB /* AgreementCheckBox.swift in Sources */,
 				1FB6BA922D0AF74100822FDB /* AgreementsView.swift in Sources */,
 				1FB6BACF2D0C13F700822FDB /* View+CustomFont.swift in Sources */,
+				1FB6BAD32D0C1DEC00822FDB /* CustomBackButton.swift in Sources */,
 				849B463C2CA56CE70087716B /* Morph.swift in Sources */,
 				849B464F2CA572950087716B /* MorphCalculator.swift in Sources */,
 				849B464B2CA570D60087716B /* PolygenicStrategy.swift in Sources */,

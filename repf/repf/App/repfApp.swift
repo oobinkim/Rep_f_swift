@@ -10,8 +10,8 @@ import Firebase
 @main
 struct repfApp: App {
     init() {
-           FirebaseApp.configure()
-       }
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
             SplashView()

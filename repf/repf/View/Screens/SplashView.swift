@@ -14,7 +14,7 @@ struct SplashView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.appBlack
+                Color.bgBlack
                     .ignoresSafeArea()
                 
                 VStack {
@@ -59,7 +59,8 @@ struct SplashView: View {
                             isEnabled: isButtonEnabled,
                             action: {
                                 navigateToAgreement = true 
-                            }
+                            },
+                            textColor: .textBlack
                         )
                         .padding(.horizontal, 16)
                         .opacity(showButtons ? 1 : 0)
@@ -70,7 +71,8 @@ struct SplashView: View {
                             action: {
                                 print("구글로 시작하기 버튼 클릭됨!")
                             },
-                            enabledColor: Color.white
+                            enabledColor: Color.appWhite,
+                            textColor: .textBlack
                         )
                         .padding(.horizontal, 16)
                         .opacity(showButtons ? 1 : 0)
