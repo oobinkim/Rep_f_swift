@@ -14,7 +14,6 @@ struct AgreementCheckbox: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            // 체크박스와 제목
             HStack {
                 Button(action: {
                     isChecked.toggle()

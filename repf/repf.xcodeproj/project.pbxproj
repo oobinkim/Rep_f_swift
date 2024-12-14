@@ -28,6 +28,13 @@
 		1FB6BACF2D0C13F700822FDB /* View+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BACE2D0C13E900822FDB /* View+CustomFont.swift */; };
 		1FB6BAD12D0C197E00822FDB /* AgreementCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BAD02D0C197100822FDB /* AgreementCheckBox.swift */; };
 		1FB6BAD32D0C1DEC00822FDB /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BAD22D0C1DCA00822FDB /* CustomBackButton.swift */; };
+		1FB6BB202D0D061000822FDB /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB1F2D0D05F000822FDB /* RegistrationView.swift */; };
+		1FB6BB222D0D078C00822FDB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB212D0D078800822FDB /* UserModel.swift */; };
+		1FB6BB242D0D07CC00822FDB /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB232D0D07C400822FDB /* RegistrationViewModel.swift */; };
+		1FB6BB262D0D08EF00822FDB /* PersonalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB252D0D085E00822FDB /* PersonalInfoView.swift */; };
+		1FB6BB292D0D093C00822FDB /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB282D0D093700822FDB /* PhoneNumberView.swift */; };
+		1FB6BB2B2D0D099300822FDB /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB2A2D0D097900822FDB /* VerificationCodeView.swift */; };
+		1FB6BB2D2D0D09D000822FDB /* ComplitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB2C2D0D09CC00822FDB /* ComplitionView.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -62,6 +69,13 @@
 		1FB6BACE2D0C13E900822FDB /* View+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CustomFont.swift"; sourceTree = "<group>"; };
 		1FB6BAD02D0C197100822FDB /* AgreementCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementCheckBox.swift; sourceTree = "<group>"; };
 		1FB6BAD22D0C1DCA00822FDB /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		1FB6BB1F2D0D05F000822FDB /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		1FB6BB212D0D078800822FDB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1FB6BB232D0D07C400822FDB /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		1FB6BB252D0D085E00822FDB /* PersonalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoView.swift; sourceTree = "<group>"; };
+		1FB6BB282D0D093700822FDB /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
+		1FB6BB2A2D0D097900822FDB /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
+		1FB6BB2C2D0D09CC00822FDB /* ComplitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplitionView.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +112,7 @@
 		1F39552D2D09950C004DEC2B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB272D0D08F900822FDB /* Registrations */,
 				1FB6BA912D0AF73C00822FDB /* AgreementsView.swift */,
 				849B46502CA574920087716B /* MorphCalculatorView.swift */,
 				1FA6EB452D07FDF30078EAA8 /* SplashView.swift */,
@@ -140,6 +155,18 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		1FB6BB272D0D08F900822FDB /* Registrations */ = {
+			isa = PBXGroup;
+			children = (
+				1FB6BB1F2D0D05F000822FDB /* RegistrationView.swift */,
+				1FB6BB252D0D085E00822FDB /* PersonalInfoView.swift */,
+				1FB6BB282D0D093700822FDB /* PhoneNumberView.swift */,
+				1FB6BB2A2D0D097900822FDB /* VerificationCodeView.swift */,
+				1FB6BB2C2D0D09CC00822FDB /* ComplitionView.swift */,
+			);
+			path = Registrations;
+			sourceTree = "<group>";
+		};
 		849472332C95781300E68946 = {
 			isa = PBXGroup;
 			children = (
@@ -163,9 +190,9 @@
 				1FB6BAC42D0C11FD00822FDB /* Font */,
 				1F3955332D09961A004DEC2B /* Extensions */,
 				849B463A2CA56CA20087716B /* Services */,
+				849B46342CA56B980087716B /* Model */,
 				849B46362CA56BCC0087716B /* ViewModel */,
 				849B46352CA56BC10087716B /* View */,
-				849B46342CA56B980087716B /* Model */,
 				849B46392CA56C600087716B /* App */,
 				849472432C95781400E68946 /* Assets.xcassets */,
 				849472452C95781400E68946 /* repf.entitlements */,
@@ -198,6 +225,7 @@
 		849B46342CA56B980087716B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB212D0D078800822FDB /* UserModel.swift */,
 				849B463B2CA56CE70087716B /* Morph.swift */,
 				849B463D2CA56DB10087716B /* InheritanceType.swift */,
 				849B46422CA56EC00087716B /* MorphManager.swift */,
@@ -217,6 +245,7 @@
 		849B46362CA56BCC0087716B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB232D0D07C400822FDB /* RegistrationViewModel.swift */,
 				849B463F2CA56E060087716B /* MorphCalculatorViewModel.swift */,
 			);
 			path = ViewModel;
@@ -321,11 +350,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB6BB2D2D0D09D000822FDB /* ComplitionView.swift in Sources */,
 				849B463E2CA56DB10087716B /* InheritanceType.swift in Sources */,
+				1FB6BB222D0D078C00822FDB /* UserModel.swift in Sources */,
 				1FB6BAD12D0C197E00822FDB /* AgreementCheckBox.swift in Sources */,
 				1FB6BA922D0AF74100822FDB /* AgreementsView.swift in Sources */,
 				1FB6BACF2D0C13F700822FDB /* View+CustomFont.swift in Sources */,
 				1FB6BAD32D0C1DEC00822FDB /* CustomBackButton.swift in Sources */,
+				1FB6BB292D0D093C00822FDB /* PhoneNumberView.swift in Sources */,
 				849B463C2CA56CE70087716B /* Morph.swift in Sources */,
 				849B464F2CA572950087716B /* MorphCalculator.swift in Sources */,
 				849B464B2CA570D60087716B /* PolygenicStrategy.swift in Sources */,
@@ -335,11 +367,15 @@
 				849B464D2CA571090087716B /* CodominantStrategy.swift in Sources */,
 				1F3955352D099625004DEC2B /* Color.swift in Sources */,
 				849B46452CA56FD00087716B /* InheritanceStrategy.swift in Sources */,
+				1FB6BB242D0D07CC00822FDB /* RegistrationViewModel.swift in Sources */,
 				849B46432CA56EC00087716B /* MorphManager.swift in Sources */,
 				849B46472CA570870087716B /* DominantStrategy.swift in Sources */,
 				849B46512CA574920087716B /* MorphCalculatorView.swift in Sources */,
+				1FB6BB262D0D08EF00822FDB /* PersonalInfoView.swift in Sources */,
 				849B46402CA56E060087716B /* MorphCalculatorViewModel.swift in Sources */,
 				1FA6EB462D07FDFF0078EAA8 /* SplashView.swift in Sources */,
+				1FB6BB202D0D061000822FDB /* RegistrationView.swift in Sources */,
+				1FB6BB2B2D0D099300822FDB /* VerificationCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
