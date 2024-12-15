@@ -11,7 +11,7 @@ import SwiftUI
 
 struct RegistrationView: View {
     @StateObject private var viewModel = RegistrationViewModel()
-
+    
     var body: some View {
         VStack {
             if viewModel.currentStep == 1 {
@@ -19,7 +19,7 @@ struct RegistrationView: View {
             } else if viewModel.currentStep == 2 {
                 PhoneNumberView(viewModel: viewModel)
             } else if viewModel.currentStep == 3 {
-                VerificationCodeView(viewModel: viewModel) 
+                VerificationCodeView(viewModel: viewModel)
             } else if viewModel.currentStep == 4 {
                 ComplitionView(viewModel: viewModel)
             }

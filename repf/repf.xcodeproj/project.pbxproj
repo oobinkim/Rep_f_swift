@@ -35,6 +35,9 @@
 		1FB6BB292D0D093C00822FDB /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB282D0D093700822FDB /* PhoneNumberView.swift */; };
 		1FB6BB2B2D0D099300822FDB /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB2A2D0D097900822FDB /* VerificationCodeView.swift */; };
 		1FB6BB2D2D0D09D000822FDB /* ComplitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB2C2D0D09CC00822FDB /* ComplitionView.swift */; };
+		1FB6BB302D0E952300822FDB /* MaxLengthModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB2F2D0E951C00822FDB /* MaxLengthModifier.swift */; };
+		1FB6BB322D0E955D00822FDB /* View+MaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB312D0E954A00822FDB /* View+MaxLength.swift */; };
+		1FB6BB342D0E9D8B00822FDB /* OutLinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -76,6 +79,9 @@
 		1FB6BB282D0D093700822FDB /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		1FB6BB2A2D0D097900822FDB /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
 		1FB6BB2C2D0D09CC00822FDB /* ComplitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplitionView.swift; sourceTree = "<group>"; };
+		1FB6BB2F2D0E951C00822FDB /* MaxLengthModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxLengthModifier.swift; sourceTree = "<group>"; };
+		1FB6BB312D0E954A00822FDB /* View+MaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MaxLength.swift"; sourceTree = "<group>"; };
+		1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutLinedTextField.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 		1F39552E2D09951A004DEC2B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */,
 				1FB6BAD22D0C1DCA00822FDB /* CustomBackButton.swift */,
 				1FB6BAD02D0C197100822FDB /* AgreementCheckBox.swift */,
 				1F39552F2D09952E004DEC2B /* PrimaryButton.swift */,
@@ -133,6 +140,7 @@
 		1F3955332D09961A004DEC2B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB312D0E954A00822FDB /* View+MaxLength.swift */,
 				1F3955342D099622004DEC2B /* Color.swift */,
 				1FB6BACE2D0C13E900822FDB /* View+CustomFont.swift */,
 			);
@@ -167,6 +175,14 @@
 			path = Registrations;
 			sourceTree = "<group>";
 		};
+		1FB6BB2E2D0E94FD00822FDB /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				1FB6BB2F2D0E951C00822FDB /* MaxLengthModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
 		849472332C95781300E68946 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +204,7 @@
 			children = (
 				1FB6BA8D2D09FECC00822FDB /* GoogleService-Info.plist */,
 				1FB6BAC42D0C11FD00822FDB /* Font */,
+				1FB6BB2E2D0E94FD00822FDB /* Modifier */,
 				1F3955332D09961A004DEC2B /* Extensions */,
 				849B463A2CA56CA20087716B /* Services */,
 				849B46342CA56B980087716B /* Model */,
@@ -365,8 +382,11 @@
 				849472402C95781300E68946 /* repfApp.swift in Sources */,
 				849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */,
 				849B464D2CA571090087716B /* CodominantStrategy.swift in Sources */,
+				1FB6BB342D0E9D8B00822FDB /* OutLinedTextField.swift in Sources */,
 				1F3955352D099625004DEC2B /* Color.swift in Sources */,
 				849B46452CA56FD00087716B /* InheritanceStrategy.swift in Sources */,
+				1FB6BB322D0E955D00822FDB /* View+MaxLength.swift in Sources */,
+				1FB6BB302D0E952300822FDB /* MaxLengthModifier.swift in Sources */,
 				1FB6BB242D0D07CC00822FDB /* RegistrationViewModel.swift in Sources */,
 				849B46432CA56EC00087716B /* MorphManager.swift in Sources */,
 				849B46472CA570870087716B /* DominantStrategy.swift in Sources */,

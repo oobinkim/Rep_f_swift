@@ -16,12 +16,12 @@ struct PersonalInfoView: View {
     
     var body: some View {
         VStack(spacing: 20) {
+            // 상단 제목
             VStack(spacing: 8) {
                 Text("본인 확인이 필요해요")
                     .font(.custom("Pretendard-Medium", size: 24))
                     .fontWeight(.semibold)
                     .foregroundColor(.appWhite)
-                    .padding(.horizontal, 32)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(.top, 68)
@@ -29,65 +29,72 @@ struct PersonalInfoView: View {
             
             // 입력 필드
             VStack(spacing: 32) {
+                // 이름 입력 필드
                 VStack(alignment: .leading, spacing: 10) {
                     Text("이름")
                         .font(.custom("Pretendard-Medium", size: 16))
                         .foregroundColor(.appWhite)
                     
-                    TextField("이름", text: $viewModel.user.name)
-                        .padding()
-                        .background(Color.textBlack)
-                        .cornerRadius(12)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: UIScreen.main.bounds.width * 0.9, maxHeight: UIScreen.main.bounds.height * 0.06)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12)
-                                .stroke(isFocused ? Color.Primary : Color.textBoxBorder, lineWidth: 1)
-                        )
-                        .accentColor(.Primary)
-                        .focused($isFocused)
+                    OutLinedTextField(
+                        text: $viewModel.user.name,
+                        placeholder: "이름",
+                        keyboardType: .default,
+                        maxLength: 15,
+                        isNumberOnly: false
+                    )
+                    .frame(maxWidth: .infinity)
                 }
                 
-                VStack(alignment: .leading, spacing: 8) {
+                // 주민등록번호 입력 필드
+                VStack(alignment: .leading, spacing: 10) {
                     Text("주민등록번호")
                         .font(.custom("Pretendard-Medium", size: 16))
                         .foregroundColor(.appWhite)
                     
                     HStack(spacing: 8) {
-                        TextField("생년월일 앞 6자리", text: $viewModel.user.idNumber)
-                            .keyboardType(.numberPad)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .foregroundColor(.black)
-                            .frame(maxWidth: UIScreen.main.bounds.width * 0.7)
+                        // 생년월일 앞 6자리 입력 필드
+                        OutLinedTextField(
+                            text: $viewModel.user.birth,
+                            placeholder: "생년월일 앞 6자리",
+                            keyboardType: .numberPad,
+                            maxLength: 6,
+                            isNumberOnly: true
+                        )
+                        .frame(maxWidth: .infinity)
                         
+                        // - 기호
                         Text("-")
-                            .font(.title)
+                            .font(.title2)
                             .foregroundColor(.appWhite)
-                            .frame(maxWidth: UIScreen.main.bounds.width * 0.05)
+                            .frame(width: 10)
                         
-                        SecureField("뒷자리", text: $viewModel.user.idNumber)
-                            .keyboardType(.numberPad)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .foregroundColor(.black)
-                            .frame(maxWidth: UIScreen.main.bounds.width * 0.05)
+                        // 성별 필드
+                        OutLinedTextField(
+                            text: $viewModel.user.gender,
+                            placeholder: "",
+                            keyboardType: .numberPad,
+                            maxLength: 1,
+                            isNumberOnly: true
+                        )
+                        .frame(width: 48)
                         
-                        Text("⦁ ⦁ ⦁ ⦁ ⦁ ⦁")
-                            .font(.title)
+                        // ****** 표시
+                        Text("⦁⦁⦁⦁⦁⦁")
+                            .font(.title2)
                             .foregroundColor(.appWhite)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .padding(.leading, 8)
                     }
                 }
             }
-            .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
-            .padding(.horizontal)
             
             Spacer()
             
+            // 다음 버튼
             PrimaryButton(
                 title: "다음",
-                isEnabled: isInputedText,
+                isEnabled: viewModel.isInputValid,
                 action: {
-                    print("다음 화면으로 이동")
+                    viewModel.goToNextStep()
                 },
                 enabledColor: .Primary,
                 disabledColor: .primaryDisabled,
@@ -95,6 +102,7 @@ struct PersonalInfoView: View {
             )
             .padding(.bottom, 40)
         }
+        .frame(maxWidth: UIScreen.main.bounds.width * 0.98)
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {

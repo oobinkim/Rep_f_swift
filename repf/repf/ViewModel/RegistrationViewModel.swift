@@ -11,6 +11,16 @@ class RegistrationViewModel: ObservableObject {
     @Published var user = UserModel()
     @Published var currentStep: Int = 1
 
+    init() {
+        self.user = UserModel()
+    }
+    
+    var isInputValid: Bool {
+           return user.name.count >= 3 &&
+                  user.birth.count == 6 &&
+                  user.gender.count == 1
+       }
+    
     func goToNextStep() {
         if currentStep < 4 {
             currentStep += 1

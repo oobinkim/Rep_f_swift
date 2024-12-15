@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct UserModel {
-    var name: String = ""
-    var idNumber: String = ""
-    var phoneNumber: String = ""
-    var carrier: String = ""
+class UserModel: ObservableObject {
+    @Published var name: String = ""
+    @Published var birth: String = ""
+    @Published var phoneNumber: String = ""
+    @Published var gender: String = ""
+    @Published var carrier: String = ""
 }
