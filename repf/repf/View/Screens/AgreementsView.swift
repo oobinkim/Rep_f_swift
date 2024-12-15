@@ -24,6 +24,7 @@ struct AgreementView: View {
                         .font(.custom("Pretendard-Medium", size: 24))
                         .fontWeight(.semibold)
                         .foregroundColor(.appWhite)
+                        .fixedSize(horizontal: false, vertical: true)
                         .padding(.horizontal, 32)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }

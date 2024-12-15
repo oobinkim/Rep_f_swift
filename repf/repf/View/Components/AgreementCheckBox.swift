@@ -32,6 +32,7 @@ struct AgreementCheckbox: View {
                 .foregroundColor(.textBoxTextGray)
                 .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
                 .padding(12)
+                .fixedSize(horizontal: false, vertical: true)
                 .lineSpacing(2)
                 .background(
                     RoundedRectangle(cornerRadius: 8)
