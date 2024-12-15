@@ -10,9 +10,16 @@ import SwiftUI
 struct PersonalInfoView: View {
     
     @ObservedObject var viewModel: RegistrationViewModel
-    @State private var isInputedText = false
     @Environment(\.presentationMode) var presentationMode
-    @FocusState private var isFocused: Bool
+    
+    // FocusState 추가
+    @FocusState private var focusedField: Field?
+    
+    enum Field {
+        case name
+        case birth
+        case gender
+    }
     
     var body: some View {
         VStack(spacing: 20) {
@@ -42,7 +49,10 @@ struct PersonalInfoView: View {
                         maxLength: 15,
                         isNumberOnly: false
                     )
-                    .frame(maxWidth: .infinity)
+                    .focused($focusedField, equals: .name)
+                    .onSubmit {
+                        focusedField = .birth
+                    }
                 }
                 
                 // 주민등록번호 입력 필드
@@ -60,7 +70,10 @@ struct PersonalInfoView: View {
                             maxLength: 6,
                             isNumberOnly: true
                         )
-                        .frame(maxWidth: .infinity)
+                        .focused($focusedField, equals: .birth)
+                        .onSubmit {
+                            focusedField = .gender
+                        }
                         
                         // - 기호
                         Text("-")
@@ -76,6 +89,11 @@ struct PersonalInfoView: View {
                             maxLength: 1,
                             isNumberOnly: true
                         )
+                        .focused($focusedField, equals: .gender)
+                        .onSubmit {
+                            focusedField = nil
+                            viewModel.goToNextStep() // 다음 버튼 동작 실행
+                        }
                         .frame(width: 48)
                         
                         // ****** 표시
@@ -86,7 +104,6 @@ struct PersonalInfoView: View {
                     }
                 }
             }
-            
             .padding(.bottom, 64)
             
             // 다음 버튼
@@ -111,8 +128,10 @@ struct PersonalInfoView: View {
                 })
             }
         }
+        .submitLabel(.next)
     }
 }
+
 
 struct PersonalInfoView_Previews: PreviewProvider {
     static var previews: some View {
