@@ -66,7 +66,7 @@ struct PersonalInfoView: View {
                         OutLinedTextField(
                             text: $viewModel.user.birth,
                             placeholder: "생년월일 앞 6자리",
-                            keyboardType: .numberPad,
+                            keyboardType: .numbersAndPunctuation,
                             maxLength: 6,
                             isNumberOnly: true
                         )
@@ -85,7 +85,7 @@ struct PersonalInfoView: View {
                         OutLinedTextField(
                             text: $viewModel.user.gender,
                             placeholder: "",
-                            keyboardType: .numberPad,
+                            keyboardType: .numbersAndPunctuation,
                             maxLength: 1,
                             isNumberOnly: true
                         )
