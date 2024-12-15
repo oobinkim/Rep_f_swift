@@ -49,6 +49,6 @@ struct PrimaryButton: View {
                 .cornerRadius(12)
         }
         .disabled(!isEnabled)
-        .frame(maxWidth: UIScreen.main.bounds.width * 0.9)
+        .frame(maxWidth: UIScreen.main.bounds.width * 0.98)
     }
 }

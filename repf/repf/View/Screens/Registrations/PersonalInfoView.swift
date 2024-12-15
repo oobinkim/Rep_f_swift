@@ -19,12 +19,12 @@ struct PersonalInfoView: View {
             // 상단 제목
             VStack(spacing: 8) {
                 Text("본인 확인이 필요해요")
-                    .font(.custom("Pretendard-Medium", size: 24))
+                    .font(.custom("Pretendard-Medium", size: 28))
                     .fontWeight(.semibold)
                     .foregroundColor(.appWhite)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(.top, 68)
+            .padding(.top, 52)
             .padding(.bottom, 28)
             
             // 입력 필드
@@ -87,7 +87,7 @@ struct PersonalInfoView: View {
                 }
             }
             
-            Spacer()
+            .padding(.bottom, 64)
             
             // 다음 버튼
             PrimaryButton(
@@ -100,7 +100,7 @@ struct PersonalInfoView: View {
                 disabledColor: .primaryDisabled,
                 textColor: .textBlack
             )
-            .padding(.bottom, 40)
+            Spacer()
         }
         .frame(maxWidth: UIScreen.main.bounds.width * 0.98)
         .navigationBarBackButtonHidden(true)

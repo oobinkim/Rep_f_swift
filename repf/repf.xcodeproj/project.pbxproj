@@ -38,6 +38,7 @@
 		1FB6BB302D0E952300822FDB /* MaxLengthModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB2F2D0E951C00822FDB /* MaxLengthModifier.swift */; };
 		1FB6BB322D0E955D00822FDB /* View+MaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB312D0E954A00822FDB /* View+MaxLength.swift */; };
 		1FB6BB342D0E9D8B00822FDB /* OutLinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */; };
+		1FB6BB3A2D0ED14F00822FDB /* SegmentStyleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		1FB6BB2F2D0E951C00822FDB /* MaxLengthModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxLengthModifier.swift; sourceTree = "<group>"; };
 		1FB6BB312D0E954A00822FDB /* View+MaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MaxLength.swift"; sourceTree = "<group>"; };
 		1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutLinedTextField.swift; sourceTree = "<group>"; };
+		1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentStyleButton.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		1F39552E2D09951A004DEC2B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */,
 				1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */,
 				1FB6BAD22D0C1DCA00822FDB /* CustomBackButton.swift */,
 				1FB6BAD02D0C197100822FDB /* AgreementCheckBox.swift */,
@@ -378,6 +381,7 @@
 				849B463C2CA56CE70087716B /* Morph.swift in Sources */,
 				849B464F2CA572950087716B /* MorphCalculator.swift in Sources */,
 				849B464B2CA570D60087716B /* PolygenicStrategy.swift in Sources */,
+				1FB6BB3A2D0ED14F00822FDB /* SegmentStyleButton.swift in Sources */,
 				1F3955302D099534004DEC2B /* PrimaryButton.swift in Sources */,
 				849472402C95781300E68946 /* repfApp.swift in Sources */,
 				849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */,

@@ -35,10 +35,10 @@ struct OutLinedTextField: View {
         }
         .padding()
         .background(Color.textBlack)
-        .cornerRadius(8)
+        .cornerRadius(12)
         .foregroundColor(.appWhite)
         .overlay(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: 12)
                 .stroke(isFocused ? Color.Primary : Color.textBoxBorder, lineWidth: 1)
         )
         .accentColor(.Primary)
