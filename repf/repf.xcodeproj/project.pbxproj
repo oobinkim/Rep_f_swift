@@ -14,7 +14,6 @@
 		1FB6BA882D09FD9500822FDB /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1FB6BA872D09FD9500822FDB /* FirebaseCore */; };
 		1FB6BA8A2D09FD9500822FDB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1FB6BA892D09FD9500822FDB /* FirebaseFirestore */; };
 		1FB6BA8C2D09FD9500822FDB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 1FB6BA8B2D09FD9500822FDB /* FirebaseMessaging */; };
-		1FB6BA8E2D09FECC00822FDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FB6BA8D2D09FECC00822FDB /* GoogleService-Info.plist */; };
 		1FB6BA922D0AF74100822FDB /* AgreementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BA912D0AF73C00822FDB /* AgreementsView.swift */; };
 		1FB6BAC52D0C11FD00822FDB /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB6BAC12D0C11FD00822FDB /* Pretendard-Regular.otf */; };
 		1FB6BAC62D0C11FD00822FDB /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1FB6BABC2D0C11FD00822FDB /* Pretendard-Bold.otf */; };
@@ -40,6 +39,7 @@
 		1FB6BB342D0E9D8B00822FDB /* OutLinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */; };
 		1FB6BB3A2D0ED14F00822FDB /* SegmentStyleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */; };
 		1FB6BB402D10180900822FDB /* AppDelegate+FireBaseInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB3F2D10180500822FDB /* AppDelegate+FireBaseInit.swift */; };
+		1FB6BB422D10330F00822FDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FB6BB412D10330F00822FDB /* GoogleService-Info.plist */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -60,7 +60,6 @@
 		1F39552F2D09952E004DEC2B /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		1F3955342D099622004DEC2B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1FA6EB452D07FDF30078EAA8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		1FB6BA8D2D09FECC00822FDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FB6BA912D0AF73C00822FDB /* AgreementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementsView.swift; sourceTree = "<group>"; };
 		1FB6BABB2D0C11FD00822FDB /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		1FB6BABC2D0C11FD00822FDB /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutLinedTextField.swift; sourceTree = "<group>"; };
 		1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentStyleButton.swift; sourceTree = "<group>"; };
 		1FB6BB3F2D10180500822FDB /* AppDelegate+FireBaseInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+FireBaseInit.swift"; sourceTree = "<group>"; };
+		1FB6BB412D10330F00822FDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 		849472332C95781300E68946 = {
 			isa = PBXGroup;
 			children = (
-				1FB6BA8D2D09FECC00822FDB /* GoogleService-Info.plist */,
+				1FB6BB412D10330F00822FDB /* GoogleService-Info.plist */,
 				8494723E2C95781300E68946 /* repf */,
 				8494723D2C95781300E68946 /* Products */,
 			);
@@ -356,13 +356,13 @@
 				1FB6BAC52D0C11FD00822FDB /* Pretendard-Regular.otf in Resources */,
 				1FB6BAC62D0C11FD00822FDB /* Pretendard-Bold.otf in Resources */,
 				1FB6BAC72D0C11FD00822FDB /* Pretendard-Thin.otf in Resources */,
+				1FB6BB422D10330F00822FDB /* GoogleService-Info.plist in Resources */,
 				1FB6BAC82D0C11FD00822FDB /* Pretendard-SemiBold.otf in Resources */,
 				1FB6BAC92D0C11FD00822FDB /* Pretendard-Black.otf in Resources */,
 				1FB6BACA2D0C11FD00822FDB /* Pretendard-ExtraBold.otf in Resources */,
 				1FB6BACB2D0C11FD00822FDB /* Pretendard-ExtraLight.otf in Resources */,
 				1FB6BACC2D0C11FD00822FDB /* Pretendard-Light.otf in Resources */,
 				1FB6BACD2D0C11FD00822FDB /* Pretendard-Medium.otf in Resources */,
-				1FB6BA8E2D09FECC00822FDB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
