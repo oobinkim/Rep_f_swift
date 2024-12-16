@@ -28,8 +28,12 @@ class RegistrationViewModel: ObservableObject {
                user.gender.count == 1
     }
     
-    var isinPutValidPhoneNumber: Bool {
+    var isInputValidPhoneNumber: Bool {
         return user.phoneNumber.count == 11
+    }
+    
+    var isInPutVerificationCode: Bool {
+        return user.verificationCode.count == 6
     }
     // MARK: - 스텝 이동
     func goToNextStep() {
@@ -107,7 +111,8 @@ class RegistrationViewModel: ObservableObject {
         Auth.auth().signIn(with: credential) { authResult, error in
             if let error = error {
                 DispatchQueue.main.async {
-                    self.errorMessage = "인증 실패: \(error.localizedDescription)"
+                    self.errorMessage = "인증번호가 틀렸습니다."
+                    print("인증 실패: \(error.localizedDescription)")
                     completion(false)
                 }
                 return

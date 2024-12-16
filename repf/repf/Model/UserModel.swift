@@ -13,4 +13,5 @@ class UserModel: ObservableObject {
     @Published var phoneNumber: String = ""
     @Published var gender: String = ""
     @Published var carrier: String = ""
+    @Published var verificationCode: String = ""
 }
