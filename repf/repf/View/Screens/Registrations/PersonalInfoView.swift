@@ -92,7 +92,9 @@ struct PersonalInfoView: View {
                         .focused($focusedField, equals: .gender)
                         .onSubmit {
                             focusedField = nil
-                            viewModel.goToNextStep() // 다음 버튼 동작 실행
+                            if viewModel.isInputValidInfo{
+                                viewModel.goToNextStep()
+                            }
                         }
                         .frame(width: 48)
                         
