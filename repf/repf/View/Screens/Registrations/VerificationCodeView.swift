@@ -37,6 +37,7 @@ struct VerificationCodeView: View {
                         .foregroundColor(.appWhite)
                         .padding(.leading, 4)
                         .maxLength($viewModel.user.verificationCode, maxLength: 6)
+                        .accentColor(.Primary)
                 }
                 
                 // 밑줄
