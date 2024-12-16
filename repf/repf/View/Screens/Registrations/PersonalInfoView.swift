@@ -109,7 +109,7 @@ struct PersonalInfoView: View {
             // 다음 버튼
             PrimaryButton(
                 title: "다음",
-                isEnabled: viewModel.isInputValid,
+                isEnabled: viewModel.isInputValidInfo,
                 action: {
                     viewModel.goToNextStep()
                 },
