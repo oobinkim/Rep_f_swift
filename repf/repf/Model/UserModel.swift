@@ -15,3 +15,4 @@ class UserModel: ObservableObject {
     @Published var carrier: String = ""
     @Published var verificationCode: String = ""
 }
+

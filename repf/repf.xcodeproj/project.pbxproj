@@ -40,6 +40,12 @@
 		1FB6BB3A2D0ED14F00822FDB /* SegmentStyleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */; };
 		1FB6BB402D10180900822FDB /* AppDelegate+FireBaseInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB3F2D10180500822FDB /* AppDelegate+FireBaseInit.swift */; };
 		1FB6BB422D10330F00822FDB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FB6BB412D10330F00822FDB /* GoogleService-Info.plist */; };
+		1FB6BB452D117B1400822FDB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB442D117B1000822FDB /* ProfileView.swift */; };
+		1FB6BB472D11819F00822FDB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB462D11819700822FDB /* ProfileViewModel.swift */; };
+		1FB6BB492D11820500822FDB /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB482D11820100822FDB /* ProfileModel.swift */; };
+		1FB6BB4C2D11840000822FDB /* RegistrationViewModel+SaveUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB4B2D1183FE00822FDB /* RegistrationViewModel+SaveUserInfo.swift */; };
+		1FB6BB4E2D1184DB00822FDB /* RegistrationViewModel+sendPhoneNumberVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB4D2D1184CB00822FDB /* RegistrationViewModel+sendPhoneNumberVerification.swift */; };
+		1FB6BB502D11852900822FDB /* RegistrationViewModel+verifyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB4F2D11851D00822FDB /* RegistrationViewModel+verifyCode.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -86,6 +92,12 @@
 		1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentStyleButton.swift; sourceTree = "<group>"; };
 		1FB6BB3F2D10180500822FDB /* AppDelegate+FireBaseInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+FireBaseInit.swift"; sourceTree = "<group>"; };
 		1FB6BB412D10330F00822FDB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1FB6BB442D117B1000822FDB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		1FB6BB462D11819700822FDB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		1FB6BB482D11820100822FDB /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		1FB6BB4B2D1183FE00822FDB /* RegistrationViewModel+SaveUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewModel+SaveUserInfo.swift"; sourceTree = "<group>"; };
+		1FB6BB4D2D1184CB00822FDB /* RegistrationViewModel+sendPhoneNumberVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewModel+sendPhoneNumberVerification.swift"; sourceTree = "<group>"; };
+		1FB6BB4F2D11851D00822FDB /* RegistrationViewModel+verifyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewModel+verifyCode.swift"; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +134,7 @@
 		1F39552D2D09950C004DEC2B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB432D117AF600822FDB /* Profile */,
 				1FB6BB272D0D08F900822FDB /* Registrations */,
 				1FB6BA912D0AF73C00822FDB /* AgreementsView.swift */,
 				849B46502CA574920087716B /* MorphCalculatorView.swift */,
@@ -188,6 +201,25 @@
 			path = Modifier;
 			sourceTree = "<group>";
 		};
+		1FB6BB432D117AF600822FDB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1FB6BB442D117B1000822FDB /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1FB6BB4A2D1183E500822FDB /* RegistrationViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1FB6BB232D0D07C400822FDB /* RegistrationViewModel.swift */,
+				1FB6BB4D2D1184CB00822FDB /* RegistrationViewModel+sendPhoneNumberVerification.swift */,
+				1FB6BB4F2D11851D00822FDB /* RegistrationViewModel+verifyCode.swift */,
+				1FB6BB4B2D1183FE00822FDB /* RegistrationViewModel+SaveUserInfo.swift */,
+			);
+			path = RegistrationViewModel;
+			sourceTree = "<group>";
+		};
 		849472332C95781300E68946 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +279,7 @@
 		849B46342CA56B980087716B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB482D11820100822FDB /* ProfileModel.swift */,
 				1FB6BB212D0D078800822FDB /* UserModel.swift */,
 				849B463B2CA56CE70087716B /* Morph.swift */,
 				849B463D2CA56DB10087716B /* InheritanceType.swift */,
@@ -267,7 +300,8 @@
 		849B46362CA56BCC0087716B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1FB6BB232D0D07C400822FDB /* RegistrationViewModel.swift */,
+				1FB6BB4A2D1183E500822FDB /* RegistrationViewModel */,
+				1FB6BB462D11819700822FDB /* ProfileViewModel.swift */,
 				849B463F2CA56E060087716B /* MorphCalculatorViewModel.swift */,
 			);
 			path = ViewModel;
@@ -377,26 +411,32 @@
 				849B463E2CA56DB10087716B /* InheritanceType.swift in Sources */,
 				1FB6BB222D0D078C00822FDB /* UserModel.swift in Sources */,
 				1FB6BAD12D0C197E00822FDB /* AgreementCheckBox.swift in Sources */,
+				1FB6BB4E2D1184DB00822FDB /* RegistrationViewModel+sendPhoneNumberVerification.swift in Sources */,
 				1FB6BA922D0AF74100822FDB /* AgreementsView.swift in Sources */,
 				1FB6BB402D10180900822FDB /* AppDelegate+FireBaseInit.swift in Sources */,
 				1FB6BACF2D0C13F700822FDB /* View+CustomFont.swift in Sources */,
 				1FB6BAD32D0C1DEC00822FDB /* CustomBackButton.swift in Sources */,
 				1FB6BB292D0D093C00822FDB /* PhoneNumberView.swift in Sources */,
+				1FB6BB492D11820500822FDB /* ProfileModel.swift in Sources */,
 				849B463C2CA56CE70087716B /* Morph.swift in Sources */,
 				849B464F2CA572950087716B /* MorphCalculator.swift in Sources */,
 				849B464B2CA570D60087716B /* PolygenicStrategy.swift in Sources */,
 				1FB6BB3A2D0ED14F00822FDB /* SegmentStyleButton.swift in Sources */,
 				1F3955302D099534004DEC2B /* PrimaryButton.swift in Sources */,
 				849472402C95781300E68946 /* repfApp.swift in Sources */,
+				1FB6BB4C2D11840000822FDB /* RegistrationViewModel+SaveUserInfo.swift in Sources */,
 				849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */,
 				849B464D2CA571090087716B /* CodominantStrategy.swift in Sources */,
 				1FB6BB342D0E9D8B00822FDB /* OutLinedTextField.swift in Sources */,
+				1FB6BB472D11819F00822FDB /* ProfileViewModel.swift in Sources */,
 				1F3955352D099625004DEC2B /* Color.swift in Sources */,
 				849B46452CA56FD00087716B /* InheritanceStrategy.swift in Sources */,
 				1FB6BB322D0E955D00822FDB /* View+MaxLength.swift in Sources */,
 				1FB6BB302D0E952300822FDB /* MaxLengthModifier.swift in Sources */,
 				1FB6BB242D0D07CC00822FDB /* RegistrationViewModel.swift in Sources */,
 				849B46432CA56EC00087716B /* MorphManager.swift in Sources */,
+				1FB6BB452D117B1400822FDB /* ProfileView.swift in Sources */,
+				1FB6BB502D11852900822FDB /* RegistrationViewModel+verifyCode.swift in Sources */,
 				849B46472CA570870087716B /* DominantStrategy.swift in Sources */,
 				849B46512CA574920087716B /* MorphCalculatorView.swift in Sources */,
 				1FB6BB262D0D08EF00822FDB /* PersonalInfoView.swift in Sources */,
