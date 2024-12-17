@@ -57,8 +57,8 @@ struct PhoneNumberView: View {
                 title: "다음",
                 isEnabled: viewModel.isInputValidPhoneNumber,
                 action: {
-                   // viewModel.sendPhoneNumberVerification()
-                    viewModel.goToNextStep()
+                    viewModel.sendPhoneNumberVerification()
+                    //viewModel.goToNextStep()
                 },
                 enabledColor: .Primary,
                 disabledColor: .primaryDisabled,
