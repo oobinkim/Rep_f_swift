@@ -32,3 +32,10 @@ struct ComplitionView: View {
         }
     }
 }
+
+struct ComplitionView_Previews: PreviewProvider {
+    static var previews: some View {
+        let viewModel = RegistrationViewModel()
+        ComplitionView(viewModel: viewModel)
+    }
+}

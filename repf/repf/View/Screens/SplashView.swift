@@ -63,6 +63,7 @@ struct SplashView: View {
                             textColor: .textBlack
                         )
                         .opacity(showButtons ? 1 : 0)
+                        .padding(.horizontal)
                         
                         PrimaryButton(
                             title: "구글로 시작하기",
@@ -74,6 +75,7 @@ struct SplashView: View {
                             textColor: .textBlack
                         )
                         .opacity(showButtons ? 1 : 0)
+                        .padding(.horizontal)
                     }
                     .padding(.bottom, 20)
                 }

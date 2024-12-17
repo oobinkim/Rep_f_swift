@@ -42,7 +42,7 @@ struct AgreementView: View {
                     textColor: .white
                 )
                 .padding(.bottom, 16)
-                
+                .padding(.horizontal)
                 // 체크박스 섹션
                 VStack(alignment: .leading, spacing: 16) {
                     AgreementCheckbox(
@@ -73,6 +73,7 @@ struct AgreementView: View {
                     textColor: .textBlack
                 )
                 .padding(.bottom, 40)
+                .padding(.horizontal)
             }
             .background(Color.bgBlack.edgesIgnoringSafeArea(.all))
             .navigationBarBackButtonHidden(true)
