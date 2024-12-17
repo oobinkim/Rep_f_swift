@@ -12,6 +12,7 @@ class ProfileViewModel: ObservableObject {
     
     @Published var profile = ProfileModel()
     @Published var currentStep: Int = 1
+    let totalSteps: Int = 5
     
     // MARK: - 모델
     init() {
@@ -29,6 +30,10 @@ class ProfileViewModel: ObservableObject {
         if currentStep > 1 {
             currentStep -= 1
         }
+    }
+    // MARK: - 스텝 progress 계산
+    var progress: Double {
+        Double(currentStep) / Double(totalSteps)
     }
 }
 

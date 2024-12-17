@@ -46,6 +46,8 @@
 		1FB6BB4C2D11840000822FDB /* RegistrationViewModel+SaveUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB4B2D1183FE00822FDB /* RegistrationViewModel+SaveUserInfo.swift */; };
 		1FB6BB4E2D1184DB00822FDB /* RegistrationViewModel+sendPhoneNumberVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB4D2D1184CB00822FDB /* RegistrationViewModel+sendPhoneNumberVerification.swift */; };
 		1FB6BB502D11852900822FDB /* RegistrationViewModel+verifyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB4F2D11851D00822FDB /* RegistrationViewModel+verifyCode.swift */; };
+		1FB6BB522D118BE800822FDB /* UserTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB512D118BDF00822FDB /* UserTypeView.swift */; };
+		1FB6BB542D119C3B00822FDB /* GridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB532D119C2E00822FDB /* GridButton.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -98,6 +100,8 @@
 		1FB6BB4B2D1183FE00822FDB /* RegistrationViewModel+SaveUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewModel+SaveUserInfo.swift"; sourceTree = "<group>"; };
 		1FB6BB4D2D1184CB00822FDB /* RegistrationViewModel+sendPhoneNumberVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewModel+sendPhoneNumberVerification.swift"; sourceTree = "<group>"; };
 		1FB6BB4F2D11851D00822FDB /* RegistrationViewModel+verifyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewModel+verifyCode.swift"; sourceTree = "<group>"; };
+		1FB6BB512D118BDF00822FDB /* UserTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTypeView.swift; sourceTree = "<group>"; };
+		1FB6BB532D119C2E00822FDB /* GridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridButton.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		1F39552E2D09951A004DEC2B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB532D119C2E00822FDB /* GridButton.swift */,
 				1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */,
 				1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */,
 				1FB6BAD22D0C1DCA00822FDB /* CustomBackButton.swift */,
@@ -204,6 +209,7 @@
 		1FB6BB432D117AF600822FDB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB512D118BDF00822FDB /* UserTypeView.swift */,
 				1FB6BB442D117B1000822FDB /* ProfileView.swift */,
 			);
 			path = Profile;
@@ -431,6 +437,7 @@
 				1FB6BB472D11819F00822FDB /* ProfileViewModel.swift in Sources */,
 				1F3955352D099625004DEC2B /* Color.swift in Sources */,
 				849B46452CA56FD00087716B /* InheritanceStrategy.swift in Sources */,
+				1FB6BB542D119C3B00822FDB /* GridButton.swift in Sources */,
 				1FB6BB322D0E955D00822FDB /* View+MaxLength.swift in Sources */,
 				1FB6BB302D0E952300822FDB /* MaxLengthModifier.swift in Sources */,
 				1FB6BB242D0D07CC00822FDB /* RegistrationViewModel.swift in Sources */,
@@ -439,6 +446,7 @@
 				1FB6BB502D11852900822FDB /* RegistrationViewModel+verifyCode.swift in Sources */,
 				849B46472CA570870087716B /* DominantStrategy.swift in Sources */,
 				849B46512CA574920087716B /* MorphCalculatorView.swift in Sources */,
+				1FB6BB522D118BE800822FDB /* UserTypeView.swift in Sources */,
 				1FB6BB262D0D08EF00822FDB /* PersonalInfoView.swift in Sources */,
 				849B46402CA56E060087716B /* MorphCalculatorViewModel.swift in Sources */,
 				1FA6EB462D07FDFF0078EAA8 /* SplashView.swift in Sources */,

@@ -7,24 +7,34 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @StateObject private var viewModel = RegistrationViewModel()
+    @StateObject private var viewModel = ProfileViewModel()
     
     var body: some View {
-        VStack {
+        VStack() {
+            ProgressView(value: viewModel.progress)
+                .progressViewStyle(LinearProgressViewStyle(tint: .Primary))
+                          .frame(height: 4)
+                          .padding(.top, 68)
+                      Spacer().frame(height: 4)
+            
             if viewModel.currentStep == 1 {
-                PersonalInfoView(viewModel: viewModel)
-            } else if viewModel.currentStep == 2 {
-                PhoneNumberView(viewModel: viewModel)
-            } else if viewModel.currentStep == 3 {
-                VerificationCodeView(viewModel: viewModel)
-            } else if viewModel.currentStep == 4 {
-                ComplitionView(viewModel: viewModel)
+                UserTypeView(viewModel: viewModel)
             }
             Spacer()
         }
         .padding()
         .background(Color.bgBlack.edgesIgnoringSafeArea(.all))
         .foregroundColor(.white)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: {
+                   //TODO: skip 추가
+                }) {
+                    Text("건너뛰기")
+                        .foregroundColor(.placeHolder)
+                }
+            }
+        }
     }
 }
 
