@@ -11,6 +11,7 @@ import FirebaseFirestore
 class ProfileViewModel: ObservableObject {
     
     @Published var profile = ProfileModel()
+    @Published var species = Species()
     @Published var currentStep: Int = 1
     @Published var totalSteps: Int = 5
     

@@ -26,6 +26,12 @@ struct ProfileView: View {
                 }else{
                     NickNameView(viewModel: viewModel)
                 }
+            }else if viewModel.currentStep == 3 {
+                if viewModel.profile.userType == "업체/브리더"{
+                    MainSpeciesView(viewModel: viewModel)
+                }else{
+                    
+                }
             }
             Spacer()
         }

@@ -50,6 +50,9 @@
 		1FB6BB542D119C3B00822FDB /* GridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB532D119C2E00822FDB /* GridButton.swift */; };
 		1FB6BB562D12B98E00822FDB /* BusinessNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB552D12B98100822FDB /* BusinessNumberView.swift */; };
 		1FB6BB582D12C5B100822FDB /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB572D12C5AD00822FDB /* NickNameView.swift */; };
+		1FB6BB5A2D12CE2000822FDB /* MainSpeciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB592D12CE1A00822FDB /* MainSpeciesView.swift */; };
+		1FB6BB602D12CEEF00822FDB /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB5F2D12CEEC00822FDB /* Species.swift */; };
+		1FB6BB622D12D1FD00822FDB /* SpeciesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB612D12D1EE00822FDB /* SpeciesButton.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -106,6 +109,9 @@
 		1FB6BB532D119C2E00822FDB /* GridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridButton.swift; sourceTree = "<group>"; };
 		1FB6BB552D12B98100822FDB /* BusinessNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessNumberView.swift; sourceTree = "<group>"; };
 		1FB6BB572D12C5AD00822FDB /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
+		1FB6BB592D12CE1A00822FDB /* MainSpeciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSpeciesView.swift; sourceTree = "<group>"; };
+		1FB6BB5F2D12CEEC00822FDB /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		1FB6BB612D12D1EE00822FDB /* SpeciesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesButton.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 		1F39552E2D09951A004DEC2B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB612D12D1EE00822FDB /* SpeciesButton.swift */,
 				1FB6BB532D119C2E00822FDB /* GridButton.swift */,
 				1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */,
 				1FB6BB332D0E9D7D00822FDB /* OutLinedTextField.swift */,
@@ -217,6 +224,7 @@
 				1FB6BB512D118BDF00822FDB /* UserTypeView.swift */,
 				1FB6BB552D12B98100822FDB /* BusinessNumberView.swift */,
 				1FB6BB572D12C5AD00822FDB /* NickNameView.swift */,
+				1FB6BB592D12CE1A00822FDB /* MainSpeciesView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -291,6 +299,7 @@
 		849B46342CA56B980087716B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB5F2D12CEEC00822FDB /* Species.swift */,
 				1FB6BB482D11820100822FDB /* ProfileModel.swift */,
 				1FB6BB212D0D078800822FDB /* UserModel.swift */,
 				849B463B2CA56CE70087716B /* Morph.swift */,
@@ -437,6 +446,8 @@
 				1FB6BB3A2D0ED14F00822FDB /* SegmentStyleButton.swift in Sources */,
 				1F3955302D099534004DEC2B /* PrimaryButton.swift in Sources */,
 				849472402C95781300E68946 /* repfApp.swift in Sources */,
+				1FB6BB5A2D12CE2000822FDB /* MainSpeciesView.swift in Sources */,
+				1FB6BB622D12D1FD00822FDB /* SpeciesButton.swift in Sources */,
 				1FB6BB4C2D11840000822FDB /* RegistrationViewModel+SaveUserInfo.swift in Sources */,
 				1FB6BB562D12B98E00822FDB /* BusinessNumberView.swift in Sources */,
 				849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */,
@@ -449,6 +460,7 @@
 				1FB6BB322D0E955D00822FDB /* View+MaxLength.swift in Sources */,
 				1FB6BB302D0E952300822FDB /* MaxLengthModifier.swift in Sources */,
 				1FB6BB242D0D07CC00822FDB /* RegistrationViewModel.swift in Sources */,
+				1FB6BB602D12CEEF00822FDB /* Species.swift in Sources */,
 				849B46432CA56EC00087716B /* MorphManager.swift in Sources */,
 				1FB6BB452D117B1400822FDB /* ProfileView.swift in Sources */,
 				1FB6BB502D11852900822FDB /* RegistrationViewModel+verifyCode.swift in Sources */,

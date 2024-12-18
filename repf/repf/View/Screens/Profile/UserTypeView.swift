@@ -60,7 +60,7 @@ struct UserTypeView: View {
                         if userType == "개인사육자" {
                             viewModel.totalSteps = 3
                         } else {
-                            viewModel.totalSteps = 5
+                            viewModel.totalSteps = 4
                         }
                         
                         viewModel.goToNextStep()
