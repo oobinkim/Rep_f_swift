@@ -15,7 +15,7 @@ struct PhoneNumberView: View {
     var body: some View {
         VStack(spacing: 16) {
             Text("휴대폰 번호를 입력해주세요")
-                .font(.custom("Pretendard-Medium", size: 28))
+                .font(.custom("Pretendard-Medium", size: 24))
                 .fontWeight(.semibold)
                 .foregroundColor(.appWhite)
                 .frame(maxWidth: .infinity, alignment: .leading)

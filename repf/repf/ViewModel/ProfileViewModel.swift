@@ -12,16 +12,42 @@ class ProfileViewModel: ObservableObject {
     
     @Published var profile = ProfileModel()
     @Published var currentStep: Int = 1
-    let totalSteps: Int = 5
+    @Published var totalSteps: Int = 5
     
-    // MARK: - 모델
+    // MARK: - 사업자 첫 세자리
+    @Published var bizRegHead: String = "" {
+        didSet {
+            updateBusinessNumber()
+        }
+    }
+    // MARK: - 사업자 가운데 두자리
+    @Published var bizRegMiddle: String = "" {
+        didSet {
+            updateBusinessNumber()
+        }
+    }
+    // MARK: - 사업자 마지막 다섯자리
+    @Published var bizRegFoot: String = "" {
+        didSet {
+            updateBusinessNumber()
+        }
+    }
+    
+    // MARK: - 모델 초기화
     init() {
         self.profile = ProfileModel()
     }
     
+    // MARK: - 입력 확인
+    var isInputValid: Bool {
+        return bizRegHead.count >= 3 &&
+        bizRegMiddle.count == 2 &&
+        bizRegFoot.count == 5
+    }
+    
     // MARK: - 스텝 이동
     func goToNextStep() {
-        if currentStep < 4 {
+        if currentStep < totalSteps {
             currentStep += 1
         }
     }
@@ -31,9 +57,14 @@ class ProfileViewModel: ObservableObject {
             currentStep -= 1
         }
     }
-    // MARK: - 스텝 progress 계산
+    
+    // MARK: - 스텝 Progress 계산
     var progress: Double {
         Double(currentStep) / Double(totalSteps)
     }
+    
+    // MARK: - Business Number 업데이트
+    private func updateBusinessNumber() {
+        profile.businessNumber = "\(bizRegHead)\(bizRegMiddle)\(bizRegFoot)"
+    }
 }
-

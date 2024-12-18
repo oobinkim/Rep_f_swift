@@ -26,7 +26,7 @@ struct PersonalInfoView: View {
             // 상단 제목
             VStack(spacing: 8) {
                 Text("본인 확인이 필요해요")
-                    .font(.custom("Pretendard-Medium", size: 28))
+                    .font(.custom("Pretendard-Medium", size: 24))
                     .fontWeight(.semibold)
                     .foregroundColor(.appWhite)
                     .frame(maxWidth: .infinity, alignment: .leading)

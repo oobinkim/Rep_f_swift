@@ -20,22 +20,18 @@ struct ProfileView: View {
                
             if viewModel.currentStep == 1 {
                 UserTypeView(viewModel: viewModel)
+            }else if viewModel.currentStep == 2 {
+                if viewModel.profile.userType == "업체/브리더"{
+                    BusinessNumberView(viewModel: viewModel)
+                }else{
+                    NickNameView(viewModel: viewModel)
+                }
             }
             Spacer()
         }
         .padding()
         .background(Color.bgBlack.edgesIgnoringSafeArea(.all))
         .foregroundColor(.white)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button(action: {
-                   //TODO: skip 추가
-                }) {
-                    Text("건너뛰기")
-                        .foregroundColor(.placeHolder)
-                }
-            }
-        }
     }
 }
 
