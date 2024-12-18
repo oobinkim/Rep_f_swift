@@ -15,8 +15,9 @@ struct ProfileView: View {
                 .progressViewStyle(LinearProgressViewStyle(tint: .Primary))
                           .frame(height: 4)
                           .padding(.top, 68)
+                          .frame(maxWidth: UIScreen.main.bounds.width * 0.98)
                       Spacer().frame(height: 4)
-            
+               
             if viewModel.currentStep == 1 {
                 UserTypeView(viewModel: viewModel)
             }

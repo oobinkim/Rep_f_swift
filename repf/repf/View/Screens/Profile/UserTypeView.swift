@@ -21,13 +21,13 @@ struct UserTypeView: View {
                     .font(.custom("Pretendard-Medium", size: 28))
                     .fontWeight(.semibold)
                     .foregroundColor(.appWhite)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity)
                     .padding(.top, 32)
                     .padding(.bottom, 32)
             }
             
             // 선택 버튼 2개
-            HStack(spacing: 32) {
+            HStack(spacing: 18) {
                 GridButton(
                     iconName: "Apartment",
                     selectedIconName: "Apartment_Selected",
@@ -67,7 +67,6 @@ struct UserTypeView: View {
                 textColor: .textBlack
             )
             .padding(.bottom, 40)
-            .padding(.horizontal)
         }
         .padding()
         .navigationBarBackButtonHidden(true)

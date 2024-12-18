@@ -209,8 +209,8 @@
 		1FB6BB432D117AF600822FDB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				1FB6BB512D118BDF00822FDB /* UserTypeView.swift */,
 				1FB6BB442D117B1000822FDB /* ProfileView.swift */,
+				1FB6BB512D118BDF00822FDB /* UserTypeView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";

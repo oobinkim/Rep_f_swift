@@ -32,26 +32,27 @@ struct ComplitionView: View {
                     title: "1분만에 프로필 설정하기",
                     isEnabled: true,
                     action: {
-                        viewModel.SaveUserInfo{ success in
-                            if success {
-                                print("인증 성공")
-                                navigateToProfile = true
-                            } else {
-                                print("인증 실패: \(viewModel.errorMessage ?? "알 수 없는 오류")")
-                            }
-                        }
+                        navigateToProfile = true
+//                        viewModel.SaveUserInfo{ success in
+//                            if success {
+//                                print("인증 성공")
+//                                navigateToProfile = true
+//                            } else {
+//                                print("인증 실패: \(viewModel.errorMessage ?? "알 수 없는 오류")")
+//                            }
+//                        }
                     },
                     enabledColor: .Primary,
                     disabledColor: .primaryDisabled,
                     textColor: .textBlack
                 )
-                .padding(.horizontal)
                 Spacer()
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationDestination(isPresented: $navigateToProfile) {
-                ProfileView()
-            }
+        }
+        .frame(maxWidth: UIScreen.main.bounds.width * 0.98)
+        .navigationBarBackButtonHidden(true)
+        .navigationDestination(isPresented: $navigateToProfile) {
+            ProfileView()
         }
     }
 }
