@@ -15,26 +15,29 @@ struct ProfileView: View {
                 .progressViewStyle(LinearProgressViewStyle(tint: .Primary))
                           .frame(height: 4)
                           .padding(.top, 68)
+                          .frame(maxWidth: UIScreen.main.bounds.width * 0.98)
                       Spacer().frame(height: 4)
-            
+               
             if viewModel.currentStep == 1 {
                 UserTypeView(viewModel: viewModel)
+            }else if viewModel.currentStep == 2 {
+                if viewModel.profile.userType == "업체/브리더"{
+                    BusinessNumberView(viewModel: viewModel)
+                }else{
+                    NickNameView(viewModel: viewModel)
+                }
+            }else if viewModel.currentStep == 3 {
+                if viewModel.profile.userType == "업체/브리더"{
+                    MainSpeciesView(viewModel: viewModel)
+                }else{
+                    
+                }
             }
             Spacer()
         }
         .padding()
         .background(Color.bgBlack.edgesIgnoringSafeArea(.all))
         .foregroundColor(.white)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button(action: {
-                   //TODO: skip 추가
-                }) {
-                    Text("건너뛰기")
-                        .foregroundColor(.placeHolder)
-                }
-            }
-        }
     }
 }
 

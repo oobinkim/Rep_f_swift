@@ -1,23 +1,29 @@
 //
-//  UserTypeView.swift
+//  NickNameView.swift
 //  repf
 //
-//  Created by oobin on 12/17/24.
+//  Created by oobin on 12/18/24.
 //
 
 import SwiftUI
 
-struct UserTypeView: View {
+struct NickNameView: View {
     @ObservedObject var viewModel: ProfileViewModel
     
-    // 선택된 타입 상태
     @State private var selectedUserType: String? = nil
-
+    @FocusState private var focusedField: Field?
+    
+    enum Field {
+        case head
+        case middle
+        case foot
+    }
+    
     var body: some View {
         VStack {
             // 타이틀
             VStack(spacing: 8) {
-                Text("당신은 누구신가요?")
+                Text("뭐라고 불러드릴까요?")
                     .font(.custom("Pretendard-Medium", size: 24))
                     .fontWeight(.semibold)
                     .foregroundColor(.appWhite)
@@ -25,44 +31,29 @@ struct UserTypeView: View {
                     .padding(.top, 32)
                     .padding(.bottom, 32)
             }
+            .padding(.bottom, 16)
             
-            HStack(spacing: 18) {
-                GridButton(
-                    iconName: "Apartment",
-                    selectedIconName: "Apartment_Selected",
-                    title: "업체/브리더",
-                    isSelected: selectedUserType == "업체/브리더"
-                ) {
-                    selectedUserType = "업체/브리더"
-                    viewModel.profile.userType = selectedUserType!
+                OutLinedTextField(
+                    text: $viewModel.profile.nickName,
+                    placeholder: viewModel.profile.userType == "개인사육자" ? "닉네임 입력" : "업체명 또는 브리더명",
+                    keyboardType: .default,
+                    maxLength: 15,
+                    isNumberOnly: false
+                )
+                .onSubmit {
+                    if !viewModel.profile.nickName.isEmpty {
+                        viewModel.goToNextStep()
+                    }
                 }
-
-                GridButton(
-                    iconName: "Person",
-                    selectedIconName: "Person_Selected",
-                    title: "개인사육자",
-                    isSelected: selectedUserType == "개인사육자"
-                ) {
-                    selectedUserType = "개인사육자"
-                    viewModel.profile.userType = selectedUserType!
-                }
-            }
-            .padding(.bottom, 40)
 
             Spacer()
-
-            // 다음 버튼
+            
             PrimaryButton(
                 title: "다음",
-                isEnabled: selectedUserType != nil, 
+                isEnabled: !viewModel.profile.nickName.isEmpty,
                 action: {
                     if let userType = selectedUserType {
-                        if userType == "개인사육자" {
-                            viewModel.totalSteps = 3
-                        } else {
-                            viewModel.totalSteps = 4
-                        }
-                        
+                        print("\(userType) 선택됨")
                         viewModel.goToNextStep()
                     }
                 },
@@ -83,12 +74,17 @@ struct UserTypeView: View {
                         .foregroundColor(.placeHolder)
                 }
             }
+            ToolbarItem(placement: .navigationBarLeading) {
+                CustomBackButton(action: {
+                    viewModel.goToPreviousStep()
+                })
+            }
         }
     }
 }
 
-struct UserTypeView_Previews: PreviewProvider {
+struct NickNameView_Previews: PreviewProvider {
     static var previews: some View {
-        UserTypeView(viewModel: ProfileViewModel())
+        NickNameView(viewModel: ProfileViewModel())
     }
 }

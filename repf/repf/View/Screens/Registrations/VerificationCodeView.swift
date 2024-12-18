@@ -15,7 +15,7 @@ struct VerificationCodeView: View {
             // 타이틀
             VStack(spacing: 8) {
                 Text("인증번호를 입력해주세요")
-                    .font(.custom("Pretendard-Medium", size: 28))
+                    .font(.custom("Pretendard-Medium", size: 24))
                     .fontWeight(.semibold)
                     .foregroundColor(.appWhite)
                     .frame(maxWidth: .infinity, alignment: .leading)
