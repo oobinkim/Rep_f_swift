@@ -58,7 +58,6 @@ struct PhoneNumberView: View {
                 isEnabled: viewModel.isInputValidPhoneNumber,
                 action: {
                     viewModel.sendPhoneNumberVerification()
-                    //viewModel.goToNextStep()
                 },
                 enabledColor: .Primary,
                 disabledColor: .primaryDisabled,

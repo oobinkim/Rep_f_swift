@@ -61,7 +61,7 @@ struct VerificationCodeView: View {
                 title: "다음",
                 isEnabled: viewModel.isInPutVerificationCode,
                 action: {
-                    //viewModel.goToNextStep()
+                    viewModel.goToNextStep()
                     viewModel.verifyCode(verificationCode: viewModel.user.verificationCode) { success in
                         if success {
                             print("인증 성공")

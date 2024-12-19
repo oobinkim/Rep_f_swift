@@ -53,6 +53,12 @@
 		1FB6BB5A2D12CE2000822FDB /* MainSpeciesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB592D12CE1A00822FDB /* MainSpeciesView.swift */; };
 		1FB6BB602D12CEEF00822FDB /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB5F2D12CEEC00822FDB /* Species.swift */; };
 		1FB6BB622D12D1FD00822FDB /* SpeciesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB612D12D1EE00822FDB /* SpeciesButton.swift */; };
+		1FB6BB662D14168A00822FDB /* ProfileComplitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB652D14168000822FDB /* ProfileComplitionView.swift */; };
+		1FB6BB692D14284A00822FDB /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB682D14284500822FDB /* FirebaseService.swift */; };
+		1FB6BB6B2D14290F00822FDB /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB6A2D14290800822FDB /* FirebaseAuthService.swift */; };
+		1FB6BB6E2D142AA000822FDB /* ProfileViewModel+SaveProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB6D2D142A9700822FDB /* ProfileViewModel+SaveProfile.swift */; };
+		1FB6BB702D142C6900822FDB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB6F2D142C6400822FDB /* MainView.swift */; };
+		1FB6BB732D1437DB00822FDB /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB722D1437D400822FDB /* SplashViewModel.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -112,6 +118,12 @@
 		1FB6BB592D12CE1A00822FDB /* MainSpeciesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSpeciesView.swift; sourceTree = "<group>"; };
 		1FB6BB5F2D12CEEC00822FDB /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		1FB6BB612D12D1EE00822FDB /* SpeciesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesButton.swift; sourceTree = "<group>"; };
+		1FB6BB652D14168000822FDB /* ProfileComplitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileComplitionView.swift; sourceTree = "<group>"; };
+		1FB6BB682D14284500822FDB /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		1FB6BB6A2D14290800822FDB /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		1FB6BB6D2D142A9700822FDB /* ProfileViewModel+SaveProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewModel+SaveProfile.swift"; sourceTree = "<group>"; };
+		1FB6BB6F2D142C6400822FDB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1FB6BB722D1437D400822FDB /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,11 +160,12 @@
 		1F39552D2D09950C004DEC2B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				1FB6BB432D117AF600822FDB /* Profile */,
-				1FB6BB272D0D08F900822FDB /* Registrations */,
-				1FB6BA912D0AF73C00822FDB /* AgreementsView.swift */,
-				849B46502CA574920087716B /* MorphCalculatorView.swift */,
 				1FA6EB452D07FDF30078EAA8 /* SplashView.swift */,
+				1FB6BA912D0AF73C00822FDB /* AgreementsView.swift */,
+				1FB6BB272D0D08F900822FDB /* Registrations */,
+				1FB6BB432D117AF600822FDB /* Profile */,
+				1FB6BB712D142C6F00822FDB /* Main */,
+				849B46502CA574920087716B /* MorphCalculatorView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -225,6 +238,7 @@
 				1FB6BB552D12B98100822FDB /* BusinessNumberView.swift */,
 				1FB6BB572D12C5AD00822FDB /* NickNameView.swift */,
 				1FB6BB592D12CE1A00822FDB /* MainSpeciesView.swift */,
+				1FB6BB652D14168000822FDB /* ProfileComplitionView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -238,6 +252,32 @@
 				1FB6BB4B2D1183FE00822FDB /* RegistrationViewModel+SaveUserInfo.swift */,
 			);
 			path = RegistrationViewModel;
+			sourceTree = "<group>";
+		};
+		1FB6BB672D14283B00822FDB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1FB6BB6A2D14290800822FDB /* FirebaseAuthService.swift */,
+				1FB6BB682D14284500822FDB /* FirebaseService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1FB6BB6C2D142A7E00822FDB /* ProfileViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1FB6BB462D11819700822FDB /* ProfileViewModel.swift */,
+				1FB6BB6D2D142A9700822FDB /* ProfileViewModel+SaveProfile.swift */,
+			);
+			path = ProfileViewModel;
+			sourceTree = "<group>";
+		};
+		1FB6BB712D142C6F00822FDB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1FB6BB6F2D142C6400822FDB /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		849472332C95781300E68946 = {
@@ -260,6 +300,7 @@
 		8494723E2C95781300E68946 /* repf */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB672D14283B00822FDB /* Service */,
 				1FB6BAC42D0C11FD00822FDB /* Font */,
 				1FB6BB2E2D0E94FD00822FDB /* Modifier */,
 				1F3955332D09961A004DEC2B /* Extensions */,
@@ -321,8 +362,9 @@
 		849B46362CA56BCC0087716B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB722D1437D400822FDB /* SplashViewModel.swift */,
 				1FB6BB4A2D1183E500822FDB /* RegistrationViewModel */,
-				1FB6BB462D11819700822FDB /* ProfileViewModel.swift */,
+				1FB6BB6C2D142A7E00822FDB /* ProfileViewModel */,
 				849B463F2CA56E060087716B /* MorphCalculatorViewModel.swift */,
 			);
 			path = ViewModel;
@@ -429,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FB6BB2D2D0D09D000822FDB /* ComplitionView.swift in Sources */,
+				1FB6BB692D14284A00822FDB /* FirebaseService.swift in Sources */,
 				849B463E2CA56DB10087716B /* InheritanceType.swift in Sources */,
 				1FB6BB222D0D078C00822FDB /* UserModel.swift in Sources */,
 				1FB6BAD12D0C197E00822FDB /* AgreementCheckBox.swift in Sources */,
@@ -451,10 +494,14 @@
 				1FB6BB4C2D11840000822FDB /* RegistrationViewModel+SaveUserInfo.swift in Sources */,
 				1FB6BB562D12B98E00822FDB /* BusinessNumberView.swift in Sources */,
 				849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */,
+				1FB6BB6B2D14290F00822FDB /* FirebaseAuthService.swift in Sources */,
+				1FB6BB732D1437DB00822FDB /* SplashViewModel.swift in Sources */,
+				1FB6BB6E2D142AA000822FDB /* ProfileViewModel+SaveProfile.swift in Sources */,
 				849B464D2CA571090087716B /* CodominantStrategy.swift in Sources */,
 				1FB6BB342D0E9D8B00822FDB /* OutLinedTextField.swift in Sources */,
 				1FB6BB472D11819F00822FDB /* ProfileViewModel.swift in Sources */,
 				1F3955352D099625004DEC2B /* Color.swift in Sources */,
+				1FB6BB702D142C6900822FDB /* MainView.swift in Sources */,
 				849B46452CA56FD00087716B /* InheritanceStrategy.swift in Sources */,
 				1FB6BB542D119C3B00822FDB /* GridButton.swift in Sources */,
 				1FB6BB322D0E955D00822FDB /* View+MaxLength.swift in Sources */,
@@ -468,6 +515,7 @@
 				849B46512CA574920087716B /* MorphCalculatorView.swift in Sources */,
 				1FB6BB522D118BE800822FDB /* UserTypeView.swift in Sources */,
 				1FB6BB262D0D08EF00822FDB /* PersonalInfoView.swift in Sources */,
+				1FB6BB662D14168A00822FDB /* ProfileComplitionView.swift in Sources */,
 				849B46402CA56E060087716B /* MorphCalculatorViewModel.swift in Sources */,
 				1FA6EB462D07FDFF0078EAA8 /* SplashView.swift in Sources */,
 				1FB6BB202D0D061000822FDB /* RegistrationView.swift in Sources */,

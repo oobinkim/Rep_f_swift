@@ -15,6 +15,7 @@ class ProfileViewModel: ObservableObject {
     @Published var currentStep: Int = 1
     @Published var totalSteps: Int = 5
     
+    
     // MARK: - 사업자 첫 세자리
     @Published var bizRegHead: String = "" {
         didSet {
