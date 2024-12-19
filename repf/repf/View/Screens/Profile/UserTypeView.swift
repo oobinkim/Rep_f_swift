@@ -12,7 +12,6 @@ struct UserTypeView: View {
     
     // 선택된 타입 상태
     @State private var selectedUserType: String? = nil
-
     var body: some View {
         VStack {
             // 타이틀
@@ -60,7 +59,7 @@ struct UserTypeView: View {
                         if userType == "개인사육자" {
                             viewModel.totalSteps = 3
                         } else {
-                            viewModel.totalSteps = 4
+                            viewModel.totalSteps = 5
                         }
                         
                         viewModel.goToNextStep()

@@ -34,6 +34,7 @@ struct MainSpeciesView: View {
                                    isSelected: selectedSpecies == species
                                ) {
                                    selectedSpecies = species
+                                   viewModel.profile.mainSpecies = species
                                }
                            }
                        }
@@ -45,6 +46,7 @@ struct MainSpeciesView: View {
                                    isSelected: selectedSpecies == species
                                ) {
                                    selectedSpecies = species
+                                   viewModel.profile.mainSpecies = species
                                }
                            }
                        }
@@ -56,6 +58,7 @@ struct MainSpeciesView: View {
                                    isSelected: selectedSpecies == species
                                ) {
                                    selectedSpecies = species
+                                   viewModel.profile.mainSpecies = species
                                }
                            }
                        }
@@ -67,6 +70,7 @@ struct MainSpeciesView: View {
                                    isSelected: selectedSpecies == species
                                ) {
                                    selectedSpecies = species
+                                   viewModel.profile.mainSpecies = species
                                }
                            }
                        }
@@ -78,6 +82,7 @@ struct MainSpeciesView: View {
                                    isSelected: selectedSpecies == species
                                ) {
                                    selectedSpecies = species
+                                   viewModel.profile.mainSpecies = species
                                }
                            }
                        }
@@ -90,6 +95,7 @@ struct MainSpeciesView: View {
                                isSelected: selectedSpecies == "none"
                            ) {
                                selectedSpecies = "none"
+                               viewModel.profile.mainSpecies = "none"
                            }
                            Spacer() // 왼쪽 정렬
                        }
@@ -123,6 +129,7 @@ struct MainSpeciesView: View {
             }
             ToolbarItem(placement: .navigationBarLeading) {
                 CustomBackButton(action: {
+                    viewModel.profile.mainSpecies = selectedSpecies!
                     viewModel.goToPreviousStep()
                 })
             }

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import FirebaseFirestore
 
 class RegistrationViewModel: ObservableObject {
     
@@ -16,7 +15,6 @@ class RegistrationViewModel: ObservableObject {
     @Published var isVerificationInProgress: Bool = false
     @Published var errorMessage: String?
     
-    var db = Firestore.firestore()
     
     // MARK: - 모델
     init() {
@@ -25,7 +23,7 @@ class RegistrationViewModel: ObservableObject {
 
     // MARK: - 입력 확인
     var isInputValidInfo: Bool {
-        return user.name.count >= 3 &&
+        return user.name.count >= 2 &&
                user.birth.count == 6 &&
                user.gender.count == 1
     }

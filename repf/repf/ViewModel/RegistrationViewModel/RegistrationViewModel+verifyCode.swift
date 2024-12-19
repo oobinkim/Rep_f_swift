@@ -7,7 +7,7 @@
 
 import FirebaseAuth
 
-extension RegistrationViewModel{
+extension RegistrationViewModel {
     // MARK: - Firebase 인증 검증
     func verifyCode(verificationCode: String, completion: @escaping (Bool) -> Void) {
         guard let verificationID = verificationID else {
@@ -15,23 +15,21 @@ extension RegistrationViewModel{
             completion(false)
             return
         }
-        
-        let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: verificationCode)
-        
-        Auth.auth().signIn(with: credential) { authResult, error in
-            if let error = error {
-                DispatchQueue.main.async {
-                    self.errorMessage = "인증번호가 틀렸습니다."
-                    print("인증 실패: \(error.localizedDescription)")
-                    completion(false)
-                }
-                return
-            }
+
+        FirebaseAuthService.shared.verifyCode(verificationID: verificationID, verificationCode: verificationCode) { [weak self] result in
+            guard let self = self else { return }
             
             DispatchQueue.main.async {
-                print("인증 성공")
-                self.errorMessage = nil
-                completion(true)
+                switch result {
+                case .success(let authResult):
+                    print("인증 성공: \(authResult.user.uid)")
+                    self.errorMessage = nil
+                    completion(true)
+                case .failure(let error):
+                    print("인증 실패: \(error.localizedDescription)")
+                    self.errorMessage = "인증번호가 틀렸습니다."
+                    completion(false)
+                }
             }
         }
     }

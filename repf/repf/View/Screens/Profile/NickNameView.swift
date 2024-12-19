@@ -52,10 +52,7 @@ struct NickNameView: View {
                 title: "다음",
                 isEnabled: !viewModel.profile.nickName.isEmpty,
                 action: {
-                    if let userType = selectedUserType {
-                        print("\(userType) 선택됨")
                         viewModel.goToNextStep()
-                    }
                 },
                 enabledColor: .Primary,
                 disabledColor: .primaryDisabled,

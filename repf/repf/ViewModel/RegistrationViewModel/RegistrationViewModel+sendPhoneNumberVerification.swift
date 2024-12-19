@@ -7,37 +7,40 @@
 
 import FirebaseAuth
 
-extension RegistrationViewModel{
-    // MARK: - Firebase 인증 요청
+extension RegistrationViewModel {
     func sendPhoneNumberVerification() {
         guard !user.phoneNumber.isEmpty else {
-            errorMessage = "휴대폰 번호가 비어 있습니다."
+            errorMessage = "전화번호 없음."
             return
         }
 
-        //  번호+82 형식으로 변환
         let formattedPhoneNumber = formatPhoneNumber(user.phoneNumber)
 
         guard !formattedPhoneNumber.isEmpty else {
-            errorMessage = "잘못된 전화번호 형식입니다."
+            errorMessage = "잘못된 전화번호 형식"
             return
         }
 
         isVerificationInProgress = true
         errorMessage = nil
 
-        // Firebase에 인증 요청
-        PhoneAuthProvider.provider().verifyPhoneNumber(formattedPhoneNumber, uiDelegate: nil) { verificationID, error in
+        print("인증 요청 시작 - 번호: \(formattedPhoneNumber)")
+
+        FirebaseAuthService.shared.sendPhoneNumberVerification(phoneNumber: formattedPhoneNumber) { [weak self] result in
+            guard let self = self else { return }
+            
             DispatchQueue.main.async {
                 self.isVerificationInProgress = false
-                if let error = error {
+
+                switch result {
+                case .success(let verificationID):
+                    print("인증 ID 발급 완료: \(verificationID)")
+                    self.verificationID = verificationID
+                    self.goToNextStep()
+                case .failure(let error):
                     print("Firebase 인증 실패: \(error.localizedDescription)")
                     self.errorMessage = "인증 요청 실패: \(error.localizedDescription)"
-                    return
                 }
-                self.verificationID = verificationID
-                print("인증 ID 발급 완료: \(verificationID ?? "nil")")
-                self.goToNextStep()
             }
         }
     }
