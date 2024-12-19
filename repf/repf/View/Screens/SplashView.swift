@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SplashView: View {
+    @StateObject private var viewModel = SplashViewModel()
     @State private var navigateToAgreement = false
-    @State private var showButtons = false
-    @State private var isButtonEnabled = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -56,13 +56,13 @@ struct SplashView: View {
                     VStack(spacing: 16) {
                         PrimaryButton(
                             title: "시작하기",
-                            isEnabled: isButtonEnabled,
+                            isEnabled: viewModel.isButtonEnabled,
                             action: {
-                                navigateToAgreement = true 
+                                navigateToAgreement = true
                             },
                             textColor: .textBlack
                         )
-                        .opacity(showButtons ? 1 : 0)
+                        .opacity(viewModel.showButtons ? 1 : 0)
                         .padding(.horizontal)
                         
                         PrimaryButton(
@@ -74,7 +74,7 @@ struct SplashView: View {
                             enabledColor: Color.appWhite,
                             textColor: .textBlack
                         )
-                        .opacity(showButtons ? 1 : 0)
+                        .opacity(viewModel.showButtons ? 1 : 0)
                         .padding(.horizontal)
                     }
                     .padding(.bottom, 20)
@@ -83,14 +83,11 @@ struct SplashView: View {
             .navigationDestination(isPresented: $navigateToAgreement) {
                 AgreementView()
             }
+            .navigationDestination(isPresented: $viewModel.navigateToMain) {
+                MainView() 
+            }
             .onAppear {
-                // 2초 후 버튼 활성화
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    isButtonEnabled = true
-                    withAnimation(.easeIn(duration: 0.5)) {
-                        showButtons = true
-                    }
-                }
+                viewModel.handleAutoLogin()
             }
         }
     }
