@@ -32,15 +32,13 @@ struct ComplitionView: View {
                     title: "1분만에 프로필 설정하기",
                     isEnabled: true,
                     action: {
-                        navigateToProfile = true
-//                        viewModel.SaveUserInfo{ success in
-//                            if success {
-//                                print("인증 성공")
-//                                navigateToProfile = true
-//                            } else {
-//                                print("인증 실패: \(viewModel.errorMessage ?? "알 수 없는 오류")")
-//                            }
-//                        }
+                        viewModel.saveUserInfo { success in
+                            if success {
+                                navigateToProfile = true
+                            } else {
+                                print("인증 실패: \(viewModel.errorMessage ?? "알 수 없는 오류")")
+                            }
+                        }
                     },
                     enabledColor: .Primary,
                     disabledColor: .primaryDisabled,

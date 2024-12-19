@@ -20,14 +20,14 @@ extension ProfileViewModel {
             "userType": profile.userType,
             "businessNumber": profile.businessNumber,
             "nickName": profile.nickName,
-            "mainSpecies": profile.mainSpecies,
-            "createdAt": Timestamp(date: Date())
+            "mainSpecies": profile.mainSpecies
         ]
 
         FirebaseService.shared.saveData(
             collection: "users",
             documentID: uid,
-            data: profileData
+            data: profileData,
+            merge: true 
         ) { success, error in
             if success {
                 print("프로필 저장 성공")

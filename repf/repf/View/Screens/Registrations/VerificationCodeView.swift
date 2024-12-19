@@ -62,14 +62,14 @@ struct VerificationCodeView: View {
                 isEnabled: viewModel.isInPutVerificationCode,
                 action: {
                     viewModel.goToNextStep()
-//                    viewModel.verifyCode(verificationCode: viewModel.user.verificationCode) { success in
-//                        if success {
-//                            print("인증 성공")
-//                            viewModel.goToNextStep() // 다음 단계로 이동
-//                        } else {
-//                            print("인증 실패: \(viewModel.errorMessage ?? "알 수 없는 오류")")
-//                        }
-//                    }
+                    viewModel.verifyCode(verificationCode: viewModel.user.verificationCode) { success in
+                        if success {
+                            print("인증 성공")
+                            viewModel.goToNextStep() // 다음 단계로 이동
+                        } else {
+                            print("인증 실패: \(viewModel.errorMessage ?? "알 수 없는 오류")")
+                        }
+                    }
                 },
                 enabledColor: .Primary,
                 disabledColor: .primaryDisabled,
