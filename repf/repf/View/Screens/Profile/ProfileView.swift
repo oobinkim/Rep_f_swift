@@ -47,7 +47,7 @@ struct ProfileView: View {
         }
         .padding()
         .background(Color.bgBlack.edgesIgnoringSafeArea(.all))
-        .foregroundColor(.white)
+        .foregroundColor(.appWhite)
     }
 }
 

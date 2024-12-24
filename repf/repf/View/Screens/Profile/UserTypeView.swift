@@ -30,7 +30,8 @@ struct UserTypeView: View {
                         iconName: "Apartment",
                         selectedIconName: "Apartment_Selected",
                         title: "업체/브리더",
-                        isSelected: selectedUserType == "업체/브리더"
+                        isSelected: selectedUserType == "업체/브리더",
+                        isSelectable: true
                     ) {
                         selectedUserType = "업체/브리더"
                         viewModel.profile.userType = selectedUserType!
@@ -40,7 +41,8 @@ struct UserTypeView: View {
                         iconName: "Person",
                         selectedIconName: "Person_Selected",
                         title: "개인사육자",
-                        isSelected: selectedUserType == "개인사육자"
+                        isSelected: selectedUserType == "개인사육자",
+                        isSelectable: true
                     ) {
                         selectedUserType = "개인사육자"
                         viewModel.profile.userType = selectedUserType!

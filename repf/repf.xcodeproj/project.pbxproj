@@ -59,6 +59,7 @@
 		1FB6BB6E2D142AA000822FDB /* ProfileViewModel+SaveProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB6D2D142A9700822FDB /* ProfileViewModel+SaveProfile.swift */; };
 		1FB6BB702D142C6900822FDB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB6F2D142C6400822FDB /* MainView.swift */; };
 		1FB6BB732D1437DB00822FDB /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB722D1437D400822FDB /* SplashViewModel.swift */; };
+		1FB6BB752D1A83AD00822FDB /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB6BB742D1A83A400822FDB /* CustomTabBar.swift */; };
 		849472402C95781300E68946 /* repfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494723F2C95781300E68946 /* repfApp.swift */; };
 		849472442C95781400E68946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472432C95781400E68946 /* Assets.xcassets */; };
 		849472482C95781400E68946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849472472C95781400E68946 /* Preview Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		1FB6BB6D2D142A9700822FDB /* ProfileViewModel+SaveProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewModel+SaveProfile.swift"; sourceTree = "<group>"; };
 		1FB6BB6F2D142C6400822FDB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1FB6BB722D1437D400822FDB /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		1FB6BB742D1A83A400822FDB /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8494723C2C95781300E68946 /* repf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494723F2C95781300E68946 /* repfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repfApp.swift; sourceTree = "<group>"; };
 		849472432C95781400E68946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		1F39552E2D09951A004DEC2B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1FB6BB742D1A83A400822FDB /* CustomTabBar.swift */,
 				1FB6BB612D12D1EE00822FDB /* SpeciesButton.swift */,
 				1FB6BB532D119C2E00822FDB /* GridButton.swift */,
 				1FB6BB392D0ED14500822FDB /* SegmentStyleButton.swift */,
@@ -492,6 +495,7 @@
 				1FB6BB5A2D12CE2000822FDB /* MainSpeciesView.swift in Sources */,
 				1FB6BB622D12D1FD00822FDB /* SpeciesButton.swift in Sources */,
 				1FB6BB4C2D11840000822FDB /* RegistrationViewModel+SaveUserInfo.swift in Sources */,
+				1FB6BB752D1A83AD00822FDB /* CustomTabBar.swift in Sources */,
 				1FB6BB562D12B98E00822FDB /* BusinessNumberView.swift in Sources */,
 				849B46492CA570A30087716B /* RecessiveStrategy.swift in Sources */,
 				1FB6BB6B2D14290F00822FDB /* FirebaseAuthService.swift in Sources */,

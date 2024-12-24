@@ -11,8 +11,9 @@ struct GridButton: View {
     let iconName: String           // 기본 아이콘 이미지 이름
     let selectedIconName: String   // 선택된 상태의 아이콘 이미지 이름
     let title: String
-    let isSelected: Bool
-    let action: () -> Void
+    let isSelected: Bool           // 기존 선택 상태
+    let isSelectable: Bool         // 선택 효과 활성화 여부
+    let action: () -> Void         // 버튼 액션
     
     var body: some View {
         Button(action: {
@@ -20,7 +21,7 @@ struct GridButton: View {
         }) {
             VStack(spacing: 16) {
                 // 아이콘 (선택 여부에 따라 변경)
-                Image(isSelected ? selectedIconName : iconName)
+                Image(isSelectable && isSelected ? selectedIconName : iconName)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 32, height: 32)
@@ -31,10 +32,10 @@ struct GridButton: View {
                     .foregroundColor(.appWhite)
             }
             .frame(width: 172, height: 172)
-            .background(isSelected ? Color.gridButtonSelected : Color.textBlack)
+            .background(isSelectable && isSelected ? Color.gridButtonSelected : Color.textBlack)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(isSelected ? Color.Primary : Color.clear, lineWidth: 2)
+                    .stroke(isSelectable && isSelected ? Color.Primary : Color.clear, lineWidth: 2)
             )
             .cornerRadius(12)
         }
