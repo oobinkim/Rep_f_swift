@@ -102,7 +102,7 @@ struct MainView: View {
                             }
                             
                             GridButton(
-                                iconName: "molt-icon",
+                                 iconName: "molt-icon",
                                 selectedIconName: "molt-selected",
                                 title: "메이팅 했어요",
                                 isSelected: selectedButton == "메이팅 했어요",
